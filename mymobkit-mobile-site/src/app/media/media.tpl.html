@@ -1,0 +1,340 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>		
+		
+		<div class="col-md-9" id="content">
+		
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Media API</h3>
+			</div>
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> List Media </h4> 
+				<p></p> <br>
+				
+				<button type="button" class="btn btn-info btn-xs">Image</button><p class="long-wrap">&nbsp;&nbsp;<a ng-href="{{allMediaLink}}image">{{allMediaLink}}image</a></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Video&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;<a ng-href="{{allMediaLink}}video">{{allMediaLink}}video</a></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Audio&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;<a ng-href="{{allMediaLink}}audio">{{allMediaLink}}audio</a></p>
+			</div>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"images":[{"bucketDisplayName":"WhatsApp Images","bucketId":"440583809",
+				</code><br/><code>
+				"contentUri":"content://media/external/images/media/26423",
+				</code><br/><code>
+				"data":"/storage/sdcard0/WhatsApp/Media/WhatsApp Images/IMG-20140507-WA0000.jpg",
+				</code><br/><code>
+				"width":"600","displayName":"IMG-20140507-WA0000.jpg","height":"800",
+				</code><br/><code>
+				"mimeType":"image/jpeg","latitude":0.0,"longitude":0.0,"isPrivate":0,
+				</code><br/><code>
+				"orientation":0,"id":26423,"size":79418,"dateTaken":-733725496},
+				</code><br/><code>
+				{"bucketDisplayName":"Camera","bucketId":"1509922574",
+				</code><br/><code>
+				"contentUri":"content://media/external/images/media/26433",
+				</code><br/><code>
+				"data":"/storage/sdcard0/DCIM/Camera/20140510_104903.jpg",
+				</code><br/><code>
+				"width":"2560","displayName":"20140510_104903.jpg","height":"1920",
+				</code><br/><code>
+				"mimeType":"image/jpeg","latitude":0.0,"longitude":0.0,"isPrivate":0,
+				</code><br/><code>
+				"orientation":0,"id":26433,"size":3119282,"dateTaken":-469194825}],
+				</code><br/><code>
+				"description":"","requestMethod":"GET","isSuccessful":true}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+			
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+				<tr id="images">
+					<td>
+						images
+					</td>
+					
+				<td>
+					A list of image objects.
+				</td>
+				</tr>
+				
+				<tr id="videos">
+					<td>
+						videos
+					</td>
+					
+				<td>
+					A list of video objects.
+				</td>
+				</tr>
+				
+				<tr id="audios">
+					<td>
+						audios
+					</td>
+					
+				<td>
+					A list of audio objects.
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> View Media </h4> 
+				<p></p> <br>
+				
+				<button type="button" class="btn btn-info btn-xs">Image</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}image/<b>{id}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Video&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}video/<b>{id}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Audio&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}audio/<b>{id}</b></p>
+			</div>
+			
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="id">
+						<td>
+							id
+						</td>
+						<td>
+							Media id to retrieve the information.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"images":[{"bucketDisplayName":"Camera","bucketId":"1509922574",
+				</code><br/><code>
+				"contentUri":"content://media/external/images/media/26433",
+				</code><br/><code>
+				"data":"/storage/sdcard0/DCIM/Camera/20140510_104903.jpg",
+				</code><br/><code>
+				"width":"2560","displayName":"20140510_104903.jpg",
+				</code><br/><code>
+				"height":"1920","mimeType":"image/jpeg","latitude":0.0,
+				</code><br/><code>
+				"longitude":0.0,"isPrivate":0,"orientation":0,"id":26433,
+				</code><br/><code>
+				"size":3119282,"dateTaken":-469194825}],
+				</code><br/><code>
+				"description":"","requestMethod":"GET","isSuccessful":true}
+				</code>
+				</p>
+			</div>
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">DELETE</button> Delete Media </h4> 
+				<p></p> <br>
+				
+				<button type="button" class="btn btn-info btn-xs">Image</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}image/<b>{id}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Video&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}video/<b>{id}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Audio&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{allMediaLink}}audio/<b>{id}</b></p>
+			</div>
+			
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="id">
+						<td>
+							id
+						</td>
+						<td>
+							Media id to delete. Compulsory value which must be provided.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+				<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+					"count": 1,
+					"description": "Successfully deleted the media with id 2176",
+				</code><br/><code>
+					"requestMethod": "DELETE",
+					"isSuccessful": true
+				}</code>
+				</p>
+			</div>
+			
+			<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr>
+					<td>
+						count
+					</td>
+					
+				<td>
+					Number of deleted media.							
+				</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> Stream Media </h4> 
+				<p></p> <br>
+				
+				<button type="button" class="btn btn-info btn-xs">Image</button><p class="long-wrap">&nbsp;&nbsp;{{streamMediaLink}}image?uri=<b>{uri}</b>&id=<b>{id}</b>&kind=<b>{kind}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Video&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{streamMediaLink}}video?uri=<b>{uri}</b>&id=<b>{id}</b>&kind=<b>{kind}</b></p>
+				<br/><br/>
+				<button type="button" class="btn btn-info btn-xs">Audio&nbsp;&nbsp;&nbsp;</button><p class="long-wrap">&nbsp;&nbsp;{{streamMediaLink}}audio?uri=<b>{uri}</b>&id=<b>{id}</b>&kind=<b>{kind}</b></p>
+			</div>
+			
+				
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="uri">
+						<td>
+							uri
+						</td>
+					<td>
+						Content URI for the media, e.g. content://media/external/images/media/26423
+					</td>
+					</tr>
+					
+					<tr id="id">
+						<td>
+							id
+						</td>
+						<td>
+							Media id, e.g. 26423.
+						</td>
+					</tr>
+					
+					<tr id="kind">
+						<td>
+							kind
+						</td>
+						<td>
+							Determine how the media is displayed.
+							
+							<dl class="dl-horizontal">
+							  <dt>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dt>
+							  <dd>Image - display at the original size. <br/> Video - stream the video. <br/>
+								  Audio - stream the audio.<br> </dd>
+							  <dt>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dt>
+							  <dd>Image - display the micro thumbnail. <br/> Video - display the micro thumbnail. <br/>
+								  Audio - display the album art.</dd>
+							  <dt>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dt>
+							 <dd>Image - display the mini thumbnail. <br/> Video - display the mini thumbnail. <br/>
+								  Audio - display the album art.</dd>
+							</dl>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-info">
+			
+				<p>
+				<h4 class="alert-heading">Usage - <i>Image Gallery</i> </h3>
+				</p> <br/>				
+				  <ul class="row">
+					<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" ng-repeat="image in images" style="margin-bottom:25px">
+						<img class="img-responsive" ng-src="{{streamImageLink}}?uri={{image.contentUri}}&&id={{image.id}}&kind=1" ng-click="showImage($index)" uib-tooltip-placement="top" uib-tooltip="{{image.displayName}}"  >
+					</li>
+				  </ul>
+				
+			</div>
+			
+			<div class="alert alert-info">
+				<p>
+				<h4 class="alert-heading">Usage - <i>Video Gallery</i> </h3>
+				</p> <br/>				
+				  <ul class="row">
+					<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" ng-repeat="video in videos" style="margin-bottom:25px">
+						<img class="img-responsive" ng-src="{{streamVideoLink}}?uri={{video.contentUri}}&&id={{video.id}}&kind=1" ng-click="showVideo($index)" uib-tooltip-placement="top" uib-tooltip="{{video.displayName}}" >
+					</li>
+				  </ul>
+				
+			</div>
+			
+			
+			
+		</div>
+	</div>	
+</div>
+	

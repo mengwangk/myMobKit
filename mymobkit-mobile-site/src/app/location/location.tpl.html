@@ -1,0 +1,113 @@
+<div class="container-fluid">
+	<div class="row">
+
+
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Location API</h3>
+			</div>
+						
+			<br/>
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> Get Location</h4>
+				<br/>
+				<p class="long-wrap">
+				<a href="{{locationLink}}">{{locationLink}}</a>
+				</p>
+			</div>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+					{"latitude":3.1264249,"longitude":101.6391089,
+					</code><br/><code>
+					"description":"","requestMethod":"GET","isSuccessful":true}				
+				</code>
+				</p>
+			</div>
+
+
+			<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+
+				<tr>
+					<td>
+						latitude
+					</td>
+				<td>
+					Latitude
+				</td>
+				</tr>
+
+				<tr>
+					<td>
+						longitude
+					</td>
+				<td>
+					Longitude
+				</td>
+				</tr>
+				
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+
+				<tr>
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr>
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+
+				
+			</tbody>
+			</table>			
+
+
+
+
+			<div class="alert alert-info row">
+				<p>
+				<h4 class="alert-heading">Usage</h4>
+				</p> <br/>	
+				
+ 				<div id="map"></div>
+			    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+			         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+			    </div>
+
+			</div>
+			
+			
+		</div>
+	</div>
+</div>

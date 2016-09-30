@@ -1,0 +1,108 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Camera API</h3>
+			</div>
+						
+			<br/>
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> Capture Photo</h4>
+				<br/>
+				<p class="long-wrap">
+				<a href="{{cameraLink}}">{{cameraLink}}</a>?flash=<b>{0|1}</b>&front=<b>{0|1}</b>&resolution=<b>{0|1|2|3}</b>&focus=<b>{0|1|2|3|4|5|6}</b>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="Flash">
+						<td>
+							flash
+						</td>
+						<td>
+							Optional parameter. 0 for no flash, any other values indicate flash is required. Default to 0.
+						</td>
+					</tr>
+					
+					<tr id="Front">
+						<td>
+							front
+						</td>
+						<td>
+							Optional parameter. 0 for rear facing camera, any other values indicate front facing camera. Default to 0.
+						</td>
+					</tr>
+
+					<tr id="Resolution">
+						<td>
+							resolution
+						</td>
+						<td>
+							Optional parameter. Resolution to be used to capture the photo. Possible values are 
+
+							<dl class="dl-horizontal">
+							  <dt>0</dt>
+							  <dd>Default resolution.</dd>
+							  <dt>1</dt>
+							  <dd>Low resolution.</dd>
+							  <dt>2</dt>
+							  <dd>Medium resolution.</dd>
+							  <dt>3</dt>
+							  <dd>High resolution.</dd>							  
+							</dl>
+						</td>
+					</tr>
+
+					<tr id="Focus">
+						<td>
+							focus
+						</td>
+						<td>
+							Optional parameter. Focus mode to be used to capture the photo. Possible values are
+
+							<dl class="dl-horizontal">
+							  <dt>0</dt>
+							  <dd>Auto-focus mode.</dd>
+							  <dt>1</dt>
+							  <dd>Continuous auto focus mode intended for taking pictures.</dd>
+							  <dt>2</dt>
+							  <dd>Continuous auto focus mode intended for video recording.</dd>
+							  <dt>3</dt>
+							  <dd>Extended depth of field (EDOF). Focusing is done digitally and continuously.</dd>	
+							  <dt>4</dt>
+							  <dd>Focus is fixed.</dd>	
+							  <dt>5</dt>
+							  <dd>Focus is set at infinity.</dd>	
+							  <dt>6</dt>
+							  <dd>Macro (close-up) focus mode.</dd>							  
+							</dl>
+						</td>
+					</tr>					
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+					Photo in JPEG format.
+				</p>
+			</div>		
+			
+			
+		</div>
+	</div>
+</div>

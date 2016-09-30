@@ -1,0 +1,106 @@
+/**
+ * Copyright (C) 2015 Open Whisper Systems
+ * <p/>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p/>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * <p/>
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.mymobkit.mms;
+
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build.VERSION;
+import android.os.Build.VERSION_CODES;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.telephony.SmsManager;
+
+import com.mymobkit.mms.provider.MmsBodyProvider;
+import com.mymobkit.mms.transport.UndeliverableMessageException;
+import com.mymobkit.mms.utils.Utils;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
+
+import ws.com.google.android.mms.pdu.PduParser;
+import ws.com.google.android.mms.pdu.SendConf;
+
+import static com.mymobkit.common.LogUtils.makeLogTag;
+import static com.mymobkit.common.LogUtils.LOGW;
+
+public class OutgoingLollipopMmsConnection extends LollipopMmsConnection implements OutgoingMmsConnection {
+
+    private static final String TAG = makeLogTag(OutgoingLollipopMmsConnection.class);
+
+    private static final String ACTION = OutgoingLollipopMmsConnection.class.getCanonicalName() + "MMS_SENT_ACTION";
+
+    private byte[] response;
+
+    public OutgoingLollipopMmsConnection(Context context) {
+        super(context, ACTION);
+    }
+
+    @TargetApi(VERSION_CODES.LOLLIPOP_MR1)
+    @Override
+    public synchronized void onResult(Context context, Intent intent) {
+        if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP_MR1) {
+            LOGW(TAG, "HTTP status: " + intent.getIntExtra(SmsManager.EXTRA_MMS_HTTP_STATUS, -1));
+        }
+
+        response = intent.getByteArrayExtra(SmsManager.EXTRA_MMS_DATA);
+    }
+
+    @Override
+    @TargetApi(VERSION_CODES.LOLLIPOP)
+    public
+    @Nullable
+    synchronized SendConf send(@NonNull byte[] pduBytes, int subscriptionId)
+            throws UndeliverableMessageException {
+        beginTransaction();
+        try {
+            MmsBodyProvider.Pointer pointer = MmsBodyProvider.makeTemporaryPointer(getContext());
+            Utils.copy(new ByteArrayInputStream(pduBytes), pointer.getOutputStream());
+
+            SmsManager smsManager;
+
+            if (VERSION.SDK_INT >= 22 && subscriptionId != -1) {
+                smsManager = SmsManager.getSmsManagerForSubscriptionId(subscriptionId);
+            } else {
+                smsManager = SmsManager.getDefault();
+            }
+
+            smsManager.sendMultimediaMessage(getContext(),
+                    pointer.getUri(),
+                    null,
+                    null,
+                    getPendingIntent());
+
+            waitForResult();
+
+            LOGW(TAG, "MMS broadcast received and processed.");
+            pointer.close();
+
+            if (response == null) {
+                throw new UndeliverableMessageException("Null response.");
+            }
+
+            return (SendConf) new PduParser(response).parse();
+        } catch (IOException | TimeoutException e) {
+            throw new UndeliverableMessageException(e);
+        } finally {
+            endTransaction();
+        }
+    }
+}
+

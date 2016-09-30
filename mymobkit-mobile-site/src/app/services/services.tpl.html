@@ -1,0 +1,306 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+		
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Status API</h3>
+			</div>
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> Check Service Status </h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				<a ng-href="{{statusLink}}">{{statusLink}}</a><b>{optional parameter}</b>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="To">
+						<td nowrap>
+							optional parameter
+						</td>
+					<td>
+					Specify the optional parameter to retrieve specific information.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>network</dt>
+					  <dd>Network information only. <br/>For dual SIM phone, to retrieve additional information for a particular SIM, pass in the slot parameter, e.g. /network?slot=1. Accepted slot values are "1" or "2".</dd>
+					  <dt>battery</dt>
+					  <dd>Battery information only.</dd>
+					</dl>
+					</td>
+					</tr>
+				</tbody>
+			</table>
+	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+			
+				<p class="long-wrap">
+				<code>
+				"deviceName":"Samsung GT-I8190N",
+				</code>
+				<br/>
+				<code>
+				{"batteryInfo":{"health":"GOOD","technology":"Li-ion","status":"CHARGING","plugType":"USB", 
+				</code>
+				<br/>
+				<code>
+				"level":93,"isPresent":true,"temperature":306,"voltage":4337},
+				</code><br/><code>
+				"networkInfo":{"cellLocationType":"GSM","connectionType":"WIFI","deviceId":"355074050397674",
+				</code><br/><code>
+				"deviceSoftwareVersion":"01","gsmCellLocation":{"cid":1411909,"lac":33212,"psc":-1},
+				</code><br/><code>
+				"ipAddress":"192.168.0.101","voiceMailNumber":"121","subscriberId":"502166904880510",
+				</code><br/><code>
+				"networkCountryIso":"my","networkOperator":"50216","networkOperatorName":"",
+				</code><br/><code>
+				"networkType":"HSDPA","phoneNumber":"","phoneType":"GSM",
+				</code><br/><code>
+				"signalStrength":{"cdmaDbm":-1,"cdmaEcio":-1,"evdoDbm":-1,"evdoEcio":-1,"evdoSnr":-1,
+				</code><br/><code>
+				"gsmBitErrorRate":-1,"gsmSignalStrength":99,"isGsm":true},"simCountryIso":"my",
+				</code><br/><code>
+				"simOperator":"50216","simOperatorName":"DiGi","simSerialNumber":"89601611012681166075",
+				</code><br/><code>
+				"simState":"READY","isNetworkRoaming":false,"isConnected":true},"description":"",
+				</code><br/><code>
+				"requestMethod":"GET","isSuccessful":true}
+				</code>
+				
+				</p>
+				
+			</div>
+			
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+			
+				<tr>
+					<td>
+						deviceName
+					</td>
+					
+				<td>
+					Device name.
+				</td>
+				</tr>
+
+				<tr id="battery">
+					<td>
+						batteryInfo
+					</td>
+					
+				<td>
+					Battery information.
+					
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>health</dt>
+					  <dd>Possible values are COLD, DEAD, GOOD, OVERHEAT, OVER_VOLTAGE, UNKNOWN, and UNSPECIFIED_FAILURE.</dd>
+					  <dt>technology</dt>
+					  <dd>Battery technology.</dd>
+					  <dt>status</dt>
+					  <dd>Possible values are CHARGING, DISCHARGING, FULL, NOT_CHARGING, and UNKNOWN.</dd>
+					  <dt>plugType</dt>
+					  <dd>Possible values are AC, USB, and WIRELESS.</dd>
+					  <dt>level</dt>
+					  <dd>Battery charge level.</dd>
+					  <dt>isPresent</dt>
+					  <dd>Indicates if a battery is available.</dd>
+					  <dt>temperature</dt>
+					  <dd>Battery temperature in tenths of a degree centigrade.</dd>
+					  <dt>voltage</dt>
+					  <dd>Battery voltage in millivolts.</dd>
+					</dl>
+					
+					
+				</td>
+				</tr>
+				
+				<tr id="network">
+					<td>
+						networkInfo
+					</td>
+					
+				<td>
+					Network information.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>cellLocationType</dt>
+					  <dd>Current location type of the device. Can be either gsmCellLocation or cdmaCellLocation.</dd>
+					 
+					  <dt>gsmCellLocation</dt>
+					  <dd>
+						 GSM cell location information if cellLocationType is GSM.<br/>
+						 <br/>
+						  <ul style="margin-left:40px">
+							<li style="list-style:circle">cid - GSM cell id, -1 if unknown, 0xffff max legal value.</li>
+							<li style="list-style:circle">lac - GSM location area code, -1 if unknown, 0xffff max legal value.</li>
+							<li style="list-style:circle">psc - Primary scrambling code for UMTS, -1 if unknown or GSM.</li>
+						  </ul>
+						  
+						  <br/>
+					  </dd>
+					  
+					  <dt>cdmaCellLocation</dt>
+					  <dd>
+						CDMA cell location information if cellLocationType is CDMA.<br/>
+						 <br/>
+						  <ul style="margin-left:40px">
+							<li style="list-style:circle">baseStationId - CDMA base station identification number, -1 if unknown.</li>
+							<li style="list-style:circle">baseStationLatitude - CDMA base station latitude in units of 0.25 seconds, Integer.MAX_VALUE if unknown.</li>
+							<li style="list-style:circle">baseStationLongtitude - CDMA base station longitude in units of 0.25 seconds, Integer.MAX_VALUE if unknown.</li>
+							<li style="list-style:circle">networkId - CDMA network identification number, -1 if unknown.</li>
+							<li style="list-style:circle">systemId - CDMA system identification number, -1 if unknown.</li>
+						  </ul>
+						  
+						  <br/>
+					  </dd>
+					  
+					  
+					  <dt>connectionType</dt>
+					  <dd>Possible values are WIFI and MOBILE.</dd>
+					  
+					  <dt>deviceId</dt>
+					  <dd>Returns the unique device ID, for example, the IMEI for GSM and the MEID or ESN for CDMA phones. </dd>
+					  
+					  <dt>deviceSoftwareVersion</dt>
+					  <dd>Returns the software version number for the device, for example, the IMEI/SV for GSM phones.</dd>
+					  
+					  <dt>ipAddress</dt>
+					  <dd>IP address.</dd>
+					  
+					  <dt>voiceMailNumber</dt>
+					  <dd>Returns the voice mail number.</dd>
+					  
+					   <dt>subscriberId</dt>
+					  <dd>Returns the unique subscriber ID, for example, the IMSI for a GSM phone.</dd>
+					  
+					   <dt>networkCountryIso</dt>
+					  <dd>Returns the ISO country code equivalent of the current registered operator's MCC (Mobile Country Code).</dd>
+					  
+					   <dt>networkOperator</dt>
+					  <dd>Returns the numeric name (MCC+MNC) of current registered operator.</dd>
+					  
+					   <dt>networkOperatorName</dt>
+					  <dd>Returns the alphabetic name of current registered operator.</dd>
+					  
+					  <dt>networkType</dt>
+					  <dd>The network type for current data connection. 
+					  Possible values are 1xRTT, CDMA, EDGE, EHRPD, EVDO_0, EVDO_A, EVDO_B,
+					  GPRS, HSDPA, HPSA, HSPAP, HSUPA, IDEN, LTE, UMTS, and UNKNOWN.
+					  </dd>
+					  
+					  <dt>phoneNumber</dt>
+					  <dd>Phone number.</dd>
+					  
+					   <dt>phoneType</dt>
+					  <dd>Phone type. Possible valus are GSM, CDMA, SIP or NONE.</dd>
+					  
+					  <dt>signalStrength</dt>
+					  <dd>Signal strength.
+						<br/>
+						  <ul style="margin-left:40px">
+							<li style="list-style:circle">cdmaDbm - Get the CDMA RSSI value in dBm. </li>
+							<li style="list-style:circle">cdmaEcio - Get the CDMA Ec/Io value in dB*10.</li>
+							<li style="list-style:circle">evdoDbm - Get the EVDO RSSI value in dBm.</li>
+							<li style="list-style:circle">evdoEcio - Get the EVDO Ec/Io value in dB*10.</li>
+							<li style="list-style:circle">evdoSnr - Get the signal to noise ratio. Valid values are 0-8. 8 is the highest.</li>
+							<li style="list-style:circle">gsmBitErrorRate - Get the GSM bit error rate (0-7, 99) as defined in TS 27.007 8.5.</li>
+							<li style="list-style:circle">gsmSignalStrength - Get the GSM Signal Strength, valid values are (0-31, 99) as defined in TS 27.007 8.5.</li>
+							<li style="list-style:circle">isGsm - true if this is for GSM.</li>
+						  </ul>					  
+					  </dd>
+
+					  <dt>simCountryIso</dt>
+					  <dd>Returns the ISO country code equivalent for the SIM provider's country code.</dd> 
+
+					  <dt>simOperator</dt>
+					  <dd>Returns the MCC+MNC (mobile country code + mobile network code) of the provider of the SIM.</dd>
+					  
+					    <dt>simOperatorName</dt>
+					  <dd>Returns the Service Provider Name (SPN).</dd>
+					  
+					  <dt>simSerialNumber</dt>
+					  <dd>Returns the serial number of the SIM, if applicable.</dd>
+					  
+					  <dt>simState</dt>
+					  <dd>Returns the state of the device SIM card. Possible values are ABSENT, NETWORK_LOCKED, PIN_REQUIRED, PUK_REQUIRED, READY, UNKNOWN.					  
+					  </dd>
+					  
+					  <dt>isNetworkRoaming</dt>
+					  <dd>Returns true if the device is considered roaming on the current network, for GSM purposes.</dd>
+					  
+					  <dt>isConnected</dt>
+					  <dd>Indicates if the phone is connected to a network (WIFI or mobile).</dd>
+					  
+					  
+					</dl>
+				</td>
+				</tr>
+				
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>			
+		
+		
+		</div>
+	</div>
+	
+	
+</div>
+					
+	
+		
+		
+	

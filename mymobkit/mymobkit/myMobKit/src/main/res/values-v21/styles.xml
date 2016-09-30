@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="Theme" parent="FrameworkRoot.Theme" /> <!-- doesn't contain the pre-L code from the values/styles.xml -->
+
+    <style name="Theme.MyMobKit" parent="Theme.MyMobKit.Base">
+
+        <item name="android:navigationBarColor">#000</item>
+        <item name="android:statusBarColor">?colorPrimaryDark</item>
+
+        <item name="android:alertDialogTheme">@style/Theme.MyMobKit.AlertDialog</item>
+    </style>
+
+    <style name="Theme.MyMobKit.WithNavDrawer" parent="Theme.MyMobKit">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.MyMobKit.AlertDialog" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorAccent">@color/theme_accent_2</item>
+    </style>
+
+    <style name="Widget.MyMobKit.HeaderBar.Spinner" parent="Widget.MyMobKit.HeaderBar.Spinner.Base">
+        <item name="android:theme">@style/ActionBarThemeOverlay</item>
+    </style>
+
+    <style name="TabIndicator">
+        <item name="android:theme">@style/ActionBarThemeOverlay</item>
+    </style>
+</resources>

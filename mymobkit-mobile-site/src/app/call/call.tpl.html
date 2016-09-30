@@ -1,0 +1,241 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Call API</h3>
+			</div>
+						
+			<br/>
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Post</button> Make Call</h4>
+				<br/>
+				<p class="long-wrap">
+				{{callLink}}
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="Command">
+						<td>
+							Destination
+						</td>
+						<td>
+							Mandatory parameter. The contact name or phone number to call.
+						</td>
+					</tr>					
+					
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+				    "destination": "+60123456789",
+				    "description": "",
+				</code>
+				<br/>
+				<code>
+				    "requestMethod": "POST",
+				    "isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>   
+				<tr id="destination">
+					<td>
+						destination
+					</td>
+				<td>
+					Destination number to call.
+				</td>
+				</tr> 	      
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="isSuccessful">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+
+			<br/><br/>
+
+				<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> Retrieve Call Log</h4>
+				<br/>
+				<p class="long-wrap">
+				<a href="{{callLink}}">{{callLink}}</a></b></b>
+				</p>
+			</div>
+					
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				
+					{
+					    "callHistories": [
+					    </code>
+						<br/>
+						<code>
+					        {
+					            "callDuration": "7",
+					            "callTime": "2015-10-19T20:08:28GMT+08:00",
+					     </code>
+						<br/>
+						<code>
+					            "callType": "1",
+					            "phoneNumber": "0126868739"
+					        },
+					    </code>
+						<br/>
+						<code>
+					        {
+					            "callDuration": "43",
+					            "callTime": "2015-10-19T23:35:56GMT+08:00",
+					      </code>
+						<br/>
+						<code>
+					            "callType": "2",
+					            "phoneNumber": "0320535153"
+					        },
+					      </code>
+						<br/>
+						<code>
+					        {
+					            "callDuration": "0",
+					            "callTime": "2015-10-20T11:15:07GMT+08:00",
+					            "callType": "3",
+					       </code>
+						<br/>
+						<code>
+					            "phoneNumber": "0326015000"
+					        }
+							    ],
+						  </code>
+						<br/>
+						<code>
+							    "description": "",
+							    "requestMethod": "GET",
+							    "isSuccessful": true
+						}
+						</code>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+
+				<tr id="callHistories">
+					<td>
+						callHistories
+					</td>
+					
+					<td>
+						Call histories 
+						<br/>						
+						<dl class="dl-horizontal">
+						  <dt>callDuration</dt>
+						  <dd>The duration of the call in seconds.</dd>
+						  <dt>callTime</dt>
+						  <dd>The date the call occured.</dd>
+						  <dt>callType</dt>
+						  <dd>The type of the call (incoming, outgoing or missed).
+						  <br/>Incoming - 1, Outgoing - 2, Missed - 3
+						  </dd>
+						  <dt>phoneNumber</dt>
+						  <dd>The phone number as the user entered it.</dd>			  
+						</dl>
+					</td>
+				</tr>
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="isSuccessful">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+
+			
+		</div>
+	</div>
+</div>

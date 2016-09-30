@@ -1,0 +1,48 @@
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-9" id="content">
+			<div class="alert">
+				<p>
+				<h3 class="alert-heading">Image Gallery</h3>
+				<br/>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-warning" ng-click="deleteImages()">Delete</button>
+				</div>
+				
+				<br/><br/>
+				<div class="radio row">
+					<label>
+					 <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()">&nbsp;&nbsp;&nbsp;Select all
+					</label>
+				</div>
+				<br/>
+				</p> 				
+				
+			<div class="row-fluid row-margin-bottom">                   
+	            <div ng-repeat="image in images">	            	
+	            	<div class='row' ng-show="image.dateTaken_CHANGED"></div>
+	            	<h3 ng-show="image.dateTaken_CHANGED">{{image.dateTaken_DISPLAYED}}</h3>
+		            <div  class="col-md-4 col-xs-6 col-sm-4 no-padding lib-item" data-category="view">
+		                <div class="lib-panel">
+		                    <div class="row">		                    
+		                        <div class="col-md-5 col-xs-8 col-sm-4 lib-image-show">
+		                        	 <button class='btn btn-default' ng-click="showImage($index)" >
+		                            	<img class="img-responsive" uib-tooltip-placement="top" uib-tooltip="{{image.displayName}}" ng-src="{{streamImageLink}}?uri={{image.contentUri}}&&id={{image.id}}&kind=1" />
+		                             </button>                  
+		                        </div>
+		                        
+		                        <div class="lib-desc">
+                               		&nbsp;<input type="checkbox" ng-model="image.dateTaken_SELECTED" data-toggle="tooltip" data-placement="right" title="{{image.displayName}}" />                               		
+                            	</div>     
+                            		
+		                    </div>
+		                </div>
+		            </div> 		            
+            	</div>
+        	</div>				
+		</div>
+	</div>
+   </div>	
+</div>
+	

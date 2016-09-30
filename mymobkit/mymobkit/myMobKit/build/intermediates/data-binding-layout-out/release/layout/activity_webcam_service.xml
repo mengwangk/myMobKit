@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mymobkit.service.webcam.WebcamLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:opencv="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mymobkit.webcam.Webcam
+                android:id="@+id/webcam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                opencv:cameraId="any" />
+
+
+        </LinearLayout>
+
+        <com.mymobkit.webcam.WebcamOverlay
+            android:id="@+id/webcam_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000" />
+
+        <!-- WebRTC testing start -->
+        <!--<LinearLayout
+            android:id="@+id/principal"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="86dp"
+            android:orientation="vertical" >
+        </LinearLayout>-->
+
+        <!-- WebRTC testing end -->
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <WebView
+                android:id="@+id/disguise"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_setup"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_option"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="15dip"
+                    android:gravity="right"
+                    android:text="@string/label_options"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFFFF" />
+
+
+                <Button
+                    android:id="@+id/btn_stop"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_red"
+                    android:text="@string/label_button_stop" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    style="@style/ButtonText"
+                    android:background="@drawable/btn_green"
+                    android:text="@string/label_button_back" />
+
+
+               <ToggleButton
+                    android:id="@+id/btn_night_vision"
+                    style="@style/ButtonText"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_night_vision"
+                    android:textOff="@string/label_button_night_vision_off"
+                    android:textOn="@string/label_button_night_vision_on" />
+
+
+                <ToggleButton
+                    android:id="@+id/btn_flash"
+                    style="@style/ButtonText"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_night_vision"
+                    android:textOff="@string/label_button_flash_off"
+                    android:textOn="@string/label_button_flash_on" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_caption"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+
+              <!--  <LinearLayout   TODO
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <SeekBar
+                        android:id="@+id/exposureTimeSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>-->
+
+                <WebView
+                    android:id="@+id/night_vision_view"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_message1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFFFF" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+</com.mymobkit.service.webcam.WebcamLayout>

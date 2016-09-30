@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="alp_42447968_pmsg_connect_x_dots">
+        <item quantity="one">Соедините не менее %1$d точки</item>
+        <item quantity="other">Соедините не менее %1$d точек</item>
+        <item quantity="few">Соедините не менее %1$d точек</item>
+        <item quantity="many">Соедините не менее %1$d точек</item>
+    </plurals>
+    <string name="alp_42447968_cmd_confirm">Подтвердить</string>
+    <string name="alp_42447968_cmd_continue">Продолжить</string>
+    <string name="alp_42447968_cmd_forgot_pattern">Забыли графический ключ?</string>
+    <string name="alp_42447968_cmd_retry">Попробовать снова</string>
+    <string name="alp_42447968_loading">Загрузка...</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cell_added">Ячейка добавлена</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cleared">Графический ключ очищен</string>
+    <string name="alp_42447968_lockscreen_access_pattern_detected">Графический ключ готов</string>
+    <string name="alp_42447968_lockscreen_access_pattern_start">Графический ключ запущен</string>
+    <string name="alp_42447968_msg_connect_4dots">Соедините не менее 4 точек</string>
+    <string name="alp_42447968_msg_draw_an_unlock_pattern">Введите графический ключ</string>
+    <string name="alp_42447968_msg_draw_pattern_to_unlock">Для разблокировки введите графический ключ:</string>
+    <string name="alp_42447968_msg_pattern_recorded">Графический ключ сохранен!</string>
+    <string name="alp_42447968_msg_redraw_pattern_to_confirm">Введите ключ еще раз для подтверждения:</string>
+    <string name="alp_42447968_msg_release_finger_when_done">Отпустите, когда закончите</string>
+    <string name="alp_42447968_msg_try_again">Попробуйте еще раз</string>
+    <string name="alp_42447968_msg_your_new_unlock_pattern">Ваш новый графический ключ:</string>
+</resources>

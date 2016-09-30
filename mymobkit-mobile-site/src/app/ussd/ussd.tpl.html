@@ -1,0 +1,240 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">USSD API</h3>
+			</div>
+			
+			<div class="alert alert-warning">
+			<strong>
+				In order for USSD APIs to work, myMobKit accessibility service must be turned on under Settings->Accessibility.
+			</strong>
+			</div>
+			
+			<br/>
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Send USSD </h4>
+				<br/>
+				<p class="long-wrap">
+				{{ussdLink}}	
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="Command">
+						<td>
+							Command
+						</td>
+						<td>
+							USSD command to send. E.g. *123#.
+						</td>
+					</tr>
+					
+					<tr id="To">
+						<td>
+							Pattern
+						</td>
+						<td>
+							Expected response pattern from the command. Provide this value if the response pattern is consistent, e.g. 
+							if the response always starts with "Your current balance is ...".
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				
+				{
+				    "responsePattern": "",
+				    "sessionId": "329797043932645619",
+				    "ussdCommand": "*128%23",
+				</code><br/><code>
+				    "description": "",
+				    "requestMethod": "POST",
+				    "isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="responsePattern">
+					<td>
+						responsePattern
+					</td>
+					
+				<td>
+					The expected response pattern.	
+				</td>
+				</tr>
+				
+				<tr id="sessionId">
+					<td>
+						sessionId
+					</td>
+					
+				<td>
+					Session id which will be used to query the response later.
+				</td>
+				</tr>
+				
+				<tr id="ussdCommand">
+					<td>
+						ussdCommand
+					</td>
+					
+				<td>
+					The USSD command.
+				</td>
+				</tr>
+				
+				
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+				
+			</tbody>
+			</table>
+			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> Get USSD Response </h4>
+				<br/>
+				<p class="long-wrap">
+				{{ussdLink}}<b>{session id}</b>
+				</p>	
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="SessionId">
+						<td>
+							Session Id
+						</td>
+						<td>
+							Session id from the POST command.
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+				    "response": "[DiGi Menu\n[All prices quoted here are excluding GST]\n1 My Account\n2 Free Pass</code><br/><code>
+				    \n3 Internet\n4 Music\n5 Promotions\n6 Facebook & Friends\n7 TV & Games\n99 More, Cancel, Send]",</code><br/><code>"
+				    "sessionId": "8003226424663755025",
+				    "description": "",
+				    "requestMethod": "GET",
+				    "isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+			
+				<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="response">
+					<td>
+						response
+					</td>
+					
+				<td>
+					Response for the USSD command
+				</td>
+				</tr>
+				
+				<tr id="sessionId">
+					<td>
+						sessionId
+					</td>
+					
+				<td>
+					Session id
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>
+			
+		
+		</div>
+		
+	</div>
+	
+	
+</div>
+					
+	
+		
+		
+	

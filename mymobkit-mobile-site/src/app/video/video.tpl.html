@@ -1,0 +1,49 @@
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-9" id="content">
+			<div class="alert">
+				<p>
+				<h3 class="alert-heading">Video Gallery</h3>
+				<br/>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-warning" ng-click="deleteVideos()">Delete</button>
+				</div>
+				
+				<br/><br/>
+				<div class="radio row">
+					<label>
+					 <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()">&nbsp;&nbsp;&nbsp;Select all
+					</label>
+				</div>
+				</p> 
+			
+				<div class="row-fluid row-margin-bottom">                   
+		              <div ng-repeat="video in videos" >          	
+		            	<div class='row' ng-show="video.dateTaken_CHANGED"></div>
+		            	<h3 ng-show="video.dateTaken_CHANGED">{{video.dateTaken_DISPLAYED}}</h3>
+			            <div  class="col-md-4 col-xs-6 col-sm-4 no-padding lib-item" data-category="view">
+			                <div class="lib-panel">
+			                    <div class="row">		                    
+			                        <div class="col-md-5 col-xs-8 col-sm-4 lib-image-show">
+			                        	 <button class="btn btn-default" ng-click="showVideo($index)" >
+							        		<img class="img-responsive" uib-tooltip-placement="top" uib-tooltip="{{video.displayName}}" ng-src="{{streamVideoLink}}?uri={{video.contentUri}}&&id={{video.id}}&kind=1" />
+							        	 </button>                
+			                        </div>
+			                        
+			                        <div class="lib-desc">	                               
+	                               		&nbsp;<input type="checkbox" data-toggle="tooltip" data-placement="right" title="{{video.displayName}}" ng-model="video.dateTaken_SELECTED" />
+	                            	</div>     
+	                            		
+			                    </div>
+			                </div>
+			            </div> 		            
+	            	</div>
+	        	</div>        				
+				
+			</div>
+			
+		</div>
+	</div>	
+</div>
+	

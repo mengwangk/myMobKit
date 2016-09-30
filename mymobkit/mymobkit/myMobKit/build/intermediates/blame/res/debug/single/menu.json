@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\menu\\menu_device.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\menu\\menu_device.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\menu\\base_menu.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\menu\\base_menu.xml"
+    }
+]

@@ -1,0 +1,299 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+
+		<div class="col-md-9" id="content">
+		
+			<div class="alert alert-info">
+				<h3 class="alert-heading">vCard API</h3>
+			</div>	
+
+
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Send vCard </h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				{{vCardLink}}
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="To">
+						<td>
+							to
+						</td>
+						<td>
+						The destination number or contact name. Mandatory parameter.
+						</td>
+					</tr>
+
+					<tr id="CC">
+						<td>
+							cc
+						</td>
+						<td>
+						CC destination number or contact name.
+						</td>
+					</tr>
+
+					<tr id="BCC">
+						<td>
+							bcc
+						</td>
+						<td>
+						BCC destination number or contact name.
+						</td>
+					</tr>
+					
+					<tr id="Subject">
+						<td>
+							subject
+						</td>
+						<td>
+							vCard message subject.
+						</td>
+					</tr>
+
+					<tr id="Body">
+						<td>
+							body
+						</td>
+						<td>
+							vCard message body.
+						</td>
+					</tr>
+
+					<tr id="DeliveryReport">
+						<td>
+							deliveryReport
+						</td>
+						<td>
+							0 for no delivery report, any other values indicate delivery report is required. Default to 0 for no delivery report.
+						</td>
+					</tr>
+
+					<tr id="ReadReport">
+						<td>
+							readReport
+						</td>
+						<td>
+							0 for no read report, any other values indicate read report is required. Default to 0 for no read report.
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							vCard
+						</td>
+						<td>
+							vCard content.
+						</td>
+					</tr>					
+					
+				</tbody>
+			</table>
+	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>			
+
+					{
+					    "vCard": {
+					        "bcc": "",
+					        "body": "msg body",
+					</code><br/><code>
+					        "cc": "",
+					        "date": "2016-03-20T21:59:45GMT+08:00",
+					</code><br/><code>
+					        "to": "8632323232323",
+					        "subject": "My vCard",
+					        "id": "6492044552370211736",
+					</code><br/><code>
+					        "isDelivered": false,
+					        "isRead": false,
+					        "readReport": false,
+					</code><br/><code>
+					        "deliveryReport": false
+					    },
+					    "description": "",
+					    "requestMethod": "POST",
+					</code><br/><code>
+					    "isSuccessful": true
+					}
+				</code>
+				</p>
+			</div>
+			
+			
+			<table id="mms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+
+				<tr id="message">
+					<td>
+						vCard
+					</td>
+					
+				<td>					
+					vCard object containing the following fields for the sent message.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>to</dt>
+					  <dd>To number.</dd>
+					  <dt>cc</dt>
+					  <dd>CC number.</dd>
+					  <dt>bcc</dt>
+					  <dd>BCC number</dd>
+					  <dt>id</dt>
+					  <dd>A <b>unique identifier</b> that can be used to check the message status.</dd>
+					  <dt>subject</dt>
+					  <dd>Message subject</dd>		
+					  <dt>body</dt>
+					  <dd>Message body</dd>			
+					  <dt>deliveryReport</dt>
+					  <dd>Flag to indicates if delivery report is required.</dd>	
+					  <dt>readReport</dt>
+					  <dd>Flag to indicates if read report is required.</dd>	
+					  <dt>isDelivered</dt>
+					  <dd>Flag to indicates if message is delivered.</dd>	
+					  <dt>isRead</dt>
+					  <dd>Flag to indicates if message is read.</dd>	
+					  <dt>date</dt>
+					  <dd>Message sent date.</dd>				  
+					</dl>
+				</td>
+
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+
+			</tbody>
+			</table>			
+
+
+
+			<div class="alert alert-default">
+				<h4 id="contentapi" class="alert-heading"> <span class="label label-default">Note</span>
+				</h4> 
+				<br/>
+				<p class="long-wrap">
+				
+				<div class="list-group">
+				  <a href="#" class="list-group-item">
+				    <h4 class="list-group-item-heading">Generate vCard</h4>
+				    <p class="list-group-item-text">Use the Contact API to get the vCard for stored contacts.</p>
+				  </a>
+				  <a href="#" class="list-group-item">
+				    <h4 class="list-group-item-heading">Check vCard Message Status</h4>
+				    <p class="list-group-item-text">The vCard message is actually a MMS message. Use the MMS API to check the message status.</p>
+				  </a>				  
+				</div>
+
+				</p>
+			</div>
+			
+		
+			<div class="alert alert-info row">
+				<p>
+				<h4 class="alert-heading">Usage</h4>
+				</p> <br/>	
+					
+				<form class="form-horizontal" ng-submit="sendvCardMessage()">
+				
+				  <div class="form-group">
+					<label for="to" class="col-sm-2 control-label">To</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="mmsMessage.to" required="true" id="to" placeholder="To"/>
+					</div>
+				  </div>
+				  
+				  <div class="form-group">
+					<label for="subject" class="col-sm-2 control-label">Subject</label>
+					<div class="col-sm-10">
+	 			  		<input type="text" class="form-control" ng-model="mmsMessage.subject" required="true" id="subject" placeholder="Subject"/>
+	 			  	</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="text" class="col-sm-2 control-label">Body</label>	
+					<div class="col-sm-10">			
+						<input type="text" class="form-control" ng-model="mmsMessage.body" required="true" id="text" placeholder="Text" />
+					</div>
+				  </div>
+				
+
+				 <div class="form-group">
+					<label for="text" class="col-sm-2 control-label">vCard</label>	
+					<div class="col-sm-10">			
+						<textarea id="vcard" cols="40" rows="5" ng-model="mmsMessage.vcard" required="true">					    	
+					    </textarea>
+					</div>
+				  </div>
+			
+				 <div class="form-group">
+				  	<div class="col-sm-offset-2 col-sm-10">
+				  		<br/>
+					  <button type="submit" class="btn btn-default" ng-disabled="mmsMessageStatus">Send vCard</button>
+
+					  <br/>
+					  <br/>
+					  {{mmsSendStatus}}
+					</div>
+				  </div>						
+				</form>
+			</div>	
+
+
+		</div>
+		
+		</div>
+	</div>
+	
+	
+</div>
+					
+	
+		
+		
+	

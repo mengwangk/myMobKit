@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_contact_picture.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_contact_picture.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_drawer_explore.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_drawer_explore.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_link_icon.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_link_icon.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_action_home.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_camera.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_camera.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_drawer_lotto.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_drawer_lotto.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\drawable-hdpi\\ic_control_panel.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\drawable-hdpi\\ic_control_panel.png"
+    }
+]

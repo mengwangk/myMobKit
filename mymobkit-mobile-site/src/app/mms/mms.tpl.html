@@ -1,0 +1,642 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+
+		<div class="col-md-9" id="content">
+		
+			<div class="alert alert-info">
+				<h3 class="alert-heading">MMS API</h3>
+			</div>
+			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Configuration Parameters </h4> 
+				<p class="long-wrap">
+				{{parameterLink}}
+				</p>
+				
+				<br/><br/>
+				
+				<form class="form-horizontal" role="form" ng-submit="submitMmsForm()">
+				  <div class="form-group">
+					<label for="preferences_apn_mmsc" class="col-sm-4 control-label">MMSC URL</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" ng-model="mmsForm.preferences_apn_mmsc" required="true" id="preferences_apn_mmsc" placeholder="MMSC URL">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="preferences_apn_mms_proxy" class="col-sm-4 control-label">MMSC Proxy Host</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" ng-model="mmsForm.preferences_apn_mms_proxy" required="true" id="preferences_apn_mms_proxy" placeholder="MMS Proxy Host">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="preferences_apn_mms_port" class="col-sm-4 control-label">MMSC Proxy Port</label>
+					<div class="col-sm-3">
+					  <input type="number" class="form-control" ng-model="mmsForm.preferences_apn_mms_port" id="preferences_apn_mms_port" ng-minlength="0" ng-maxlength="9999" min="0" max="9999" placeholder="MMSC Proxy Port">
+					</div>
+				  </div>
+				
+				  <div class="form-group">
+					<label for="preferences_apn_mms_user" class="col-sm-4 control-label">MMSC User</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" ng-model="mmsForm.preferences_apn_mms_user" id="preferences_apn_mms_user" placeholder="MMSC User">
+					</div>
+				  </div>
+				  
+				  
+				  <div class="form-group">
+					<label for="preferences_apn_mms_password" class="col-sm-4 control-label">MMSC Password</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" ng-model="mmsForm.preferences_apn_mms_password" id="preferences_apn_mms_password" placeholder="MMSC Password">
+					</div>
+				  </div>
+				  
+				  <div class="form-group">
+					<label for="preferences_apn_mms_user_agent" class="col-sm-4 control-label">MMSC User Agent</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" ng-model="mmsForm.preferences_apn_mms_user_agent" required="true" id="preferences_apn_mms_user_agent" placeholder="MMSC User Agent">
+					</div>
+				  </div>
+				
+				  <div class="form-group">
+					<div class="col-sm-offset-4 col-sm-10">
+					  <button type="submit" class="btn btn-default" ng-disabled="mmsFormStatus">Save</button>
+					</div>
+				  </div>
+				</form>
+				
+				<br/>
+				{{ saveStatus}}
+			</div>
+			
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="preferences_apn_mmsc">
+						<td>
+							preferences_apn_mmsc
+						</td>
+					<td>
+						Multimedia Messaging Service Provider (MMSC) URL.
+					</td>
+					</tr>
+					
+					<tr id="preferences_apn_mms_proxy">
+						<td>
+							preferences_apn_mms_proxy
+						</td>
+						<td>
+							MMSC proxy.
+						</td>
+					</tr>
+					
+					<tr id="preferences_apn_mms_port">
+						<td>
+							preferences_apn_mms_port
+						</td>
+						<td>
+							MMSC proxy port.
+						</td>
+					</tr>
+
+					<tr id="preferences_apn_mms_user">
+						<td>
+							preferences_apn_mms_user
+						</td>
+						<td>
+							MMSC user name.
+						</td>
+					</tr>
+
+					<tr id="preferences_apn_mms_password">
+						<td>
+							preferences_apn_mms_password
+						</td>
+						<td>
+							MMSC user password.
+						</td>
+					</tr>
+
+					<tr id="preferences_apn_mms_user_agent">
+						<td>
+							preferences_apn_mms_user_agent
+						</td>
+						<td>
+							MMSC user agent
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+					"description": "",
+					"requestMethod": "POST",
+					"isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+			
+			
+			<br/><br/>
+			
+			
+			
+
+
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Send MMS </h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				{{mmsLink}}
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="To">
+						<td>
+							To
+						</td>
+						<td>
+						The destination number or contact name. Mandatory parameter.
+						</td>
+					</tr>
+
+					<tr id="CC">
+						<td>
+							CC
+						</td>
+						<td>
+						CC destination number or contact name.
+						</td>
+					</tr>
+
+					<tr id="BCC">
+						<td>
+							BCC
+						</td>
+						<td>
+						BCC destination number or contact name.
+						</td>
+					</tr>
+					
+					<tr id="Subject">
+						<td>
+							Subject
+						</td>
+						<td>
+							MMS message subject.
+						</td>
+					</tr>
+
+					<tr id="Body">
+						<td>
+							Body
+						</td>
+						<td>
+							MMS message body.
+						</td>
+					</tr>
+
+					<tr id="DeliveryReport">
+						<td>
+							DeliveryReport
+						</td>
+						<td>
+							0 for no delivery report, any other values indicate delivery report is required. Default to 0 for no delivery report.
+						</td>
+					</tr>
+
+					<tr id="ReadReport">
+						<td>
+							ReadReport
+						</td>
+						<td>
+							0 for no read report, any other values indicate read report is required. Default to 0 for no read report.
+						</td>
+					</tr>
+					
+					<tr id="PartData_{number}">
+						<td>
+							PartData_{number}
+						</td>
+						<td>
+							MMS media data to be uploaded. The number starts from 0 and maximum is 30. Each part data must have a corresponding part content type with the same number.
+						</td>
+					</tr>
+
+					<tr id="PartContentType_{number}">
+						<td>
+							PartContentType_{number}
+						</td>
+						<td>
+							MMS media content type. Must be one of the <a href="#/mms#contentapi">supported content types</a>. The number starts from 0 and maximum is 30.
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>			
+
+					{
+					    "message": {
+					        "bcc": "",
+					        "body": "msg body",
+					</code><br/><code>
+					        "cc": "",
+					        "date": "2016-03-20T21:59:45GMT+08:00",
+					</code><br/><code>
+					        "to": "8632323232323",
+					        "subject": "test api mms",
+					        "id": "6492044552370211736",
+					</code><br/><code>
+					        "isDelivered": false,
+					        "isRead": false,
+					        "readReport": false,
+					</code><br/><code>
+					        "deliveryReport": false
+					    },
+					    "description": "",
+					    "requestMethod": "POST",
+					</code><br/><code>
+					    "isSuccessful": true
+					}
+				</code>
+				</p>
+			</div>
+			
+			
+			<table id="mms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+
+				<tr id="message">
+					<td>
+						message
+					</td>
+					
+				<td>
+					
+					Message object containing the following fields for the sent message.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>to</dt>
+					  <dd>To number.</dd>
+					  <dt>cc</dt>
+					  <dd>CC number.</dd>
+					  <dt>bcc</dt>
+					  <dd>BCC number</dd>
+					  <dt>id</dt>
+					  <dd>A <b>unique identifier</b> that can be used to check the message status.</dd>
+					  <dt>subject</dt>
+					  <dd>Message subject</dd>		
+					  <dt>body</dt>
+					  <dd>Message body</dd>			
+					  <dt>deliveryReport</dt>
+					  <dd>Flag to indicates if delivery report is required.</dd>	
+					  <dt>readReport</dt>
+					  <dd>Flag to indicates if read report is required.</dd>	
+					  <dt>isDelivered</dt>
+					  <dd>Flag to indicates if message is delivered.</dd>	
+					  <dt>isRead</dt>
+					  <dd>Flag to indicates if message is read.</dd>	
+					  <dt>date</dt>
+					  <dd>Message sent date.</dd>				  
+					</dl>				
+
+
+				</td>
+				</tr>
+			</tbody>
+			</table>			
+
+
+
+			<div class="alert alert-success">
+				<h4 id="contentapi" class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> 
+				<a name="contentapi"></a>
+				Check MMS Status
+				</h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				{{mmsLink}}<b>{unique identifier}</b>
+				</p>
+			</div>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>			
+					{
+					    "message": {
+					        "bcc": "",
+					        "body": "msg body",
+					</code><br/><code>
+					        "cc": "",
+					        "date": "2016-03-20T22:03:13GMT+08:00",
+					        "to": "8632323232323",
+					        "subject": "test api mms",
+					 	</code><br/><code>
+					        "id": "7131739047516455185",
+					        "isDelivered": true,
+					        "isRead": false,
+						</code><br/><code>
+					        "readReport": false,
+					        "deliveryReport": false
+					    },
+					   	</code><br/><code>
+					    "description": "",
+					    "requestMethod": "GET",
+					    "isSuccessful": true
+					}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+
+				<tr id="message">
+					<td>
+						message
+					</td>
+					
+				<td>
+						Message object containing the following fields for the sent message.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>to</dt>
+					  <dd>To number.</dd>
+					  <dt>cc</dt>
+					  <dd>CC number.</dd>
+					  <dt>bcc</dt>
+					  <dd>BCC number</dd>
+					  <dt>id</dt>
+					  <dd>A <b>unique identifier</b> that can be used to check the message status.</dd>
+					  <dt>subject</dt>
+					  <dd>Message subject</dd>		
+					  <dt>body</dt>
+					  <dd>Message body</dd>			
+					  <dt>deliveryReport</dt>
+					  <dd>Flag to indicates if delivery report is required.</dd>	
+					  <dt>readReport</dt>
+					  <dd>Flag to indicates if read report is required.</dd>	
+					  <dt>isDelivered</dt>
+					  <dd>Flag to indicates if message is delivered.</dd>	
+					  <dt>isRead</dt>
+					  <dd>Flag to indicates if message is read.</dd>	
+					  <dt>date</dt>
+					  <dd>Message sent date.</dd>				  
+					</dl>				
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>			
+
+			<div class="alert alert-success">
+				<h4 id="contentapi" class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> 
+				<a name="contentapi"></a>
+				List Supported MMS Content Types 
+				</h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				<a ng-href="{{mmsLink}}supportedcontenttypes">{{mmsLink}}supportedcontenttypes</a>
+				</p>
+			</div>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+					{"supportedContentTypes":["text/plain","text/html","text/x-vCalendar","text/x-vCard",
+				</code><br/><code>
+					"image/jpeg","image/gif","image/vnd.wap.wbmp","image/png","image/jpg","image/x-ms-bmp",
+				</code><br/><code>
+					"audio/aac","audio/amr","audio/imelody","audio/mid","audio/midi","audio/mp3","audio/mp4",
+				</code><br/><code>
+					"audio/mpeg3","audio/mpeg","audio/mpg","audio/x-mid","audio/x-midi","audio/x-mp3",
+				</code><br/><code>
+					"audio/x-mpeg3","audio/x-mpeg","audio/x-mpg","audio/x-wav","audio/3gpp","application/ogg",
+				</code><br/><code>
+					"video/3gpp","video/3gpp2","video/h263","video/mp4","application/smil",
+				</code><br/><code>
+					"application/vnd.wap.xhtml+xml","application/xhtml+xml","application/vnd.oma.drm.content",
+				</code><br/><code>
+					"application/vnd.oma.drm.message","text/texmacs","image/x-ms-bmp","image/bmp",
+				</code><br/><code>
+					"audio/x-wav","audio/amr-wb","audio/x-ms-wma","audio/vorbis","video/mp2ts"],
+				</code><br/><code>
+					"description":"","requestMethod":"GET","isSuccessful":true}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	    
+
+				<tr id="supportedcontenttypes">
+					<td>
+						supportedcontenttypes
+					</td>
+					
+				<td>
+					A list of supported MMS content types, e.g. "text/plain", "text/x-vCalendar","text/x-vCard",
+					"video/mp4".
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>			
+		
+			
+			
+		
+			<div class="alert alert-info row">
+				<p>
+				<h4 class="alert-heading">Usage (using <a href="http://uncorkedstudios.com/blog/multipartformdata-file-upload-with-angularjs">FormData object </a>)</h4>
+				</p> <br/>	
+					
+				<form class="form-horizontal" ng-submit="sendMmsMessage()">
+				
+				  <div class="form-group">
+					<label for="to" class="col-sm-2 control-label">To</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="mmsMessage.to" required="true" id="to" placeholder="To"/>
+					</div>
+				  </div>
+				  
+				  <div class="form-group">
+					<label for="subject" class="col-sm-2 control-label">Subject</label>
+					<div class="col-sm-10">
+	 			  		<input type="text" class="form-control" ng-model="mmsMessage.subject" required="true" id="subject" placeholder="Subject"/>
+	 			  	</div>
+				  </div>
+
+				  <div class="form-group">
+					<label for="text" class="col-sm-2 control-label">Body</label>	
+					<div class="col-sm-10">			
+						<input type="text" class="form-control" ng-model="mmsMessage.body" required="true" id="text" placeholder="Text" />
+					</div>
+				  </div>
+				
+
+				<div class="form-inline">
+					<div class="form-group col-sm-2">
+					    &nbsp;
+					</div>
+					<div class="form-group">
+					    <label for="media" class="col-sm-2 control-label">Media</label>
+					    <input type="file" file-model="mmsMessage.partdata_1"/>	
+					</div>
+					 <div class="form-group">
+					    <label for="mediaType" class="col-sm-2 control-label">Type</label>
+					   	<select class="form-control" ng-required='mmsMessage.partcontenttype_1' ng-model="mmsMessage.partcontenttype_1" ng-options="s as s for s in mimeTypes"></select> 	
+					</div>
+
+				</div>
+
+				<div class="form-inline">
+					<div class="form-group col-sm-2">
+					    &nbsp;
+					</div>
+					<div class="form-group">
+					    <label for="media" class="col-sm-2 control-label">Media</label>
+					    <input type="file" file-model="mmsMessage.partdata_2"/>	
+					</div>
+					 <div class="form-group">
+					    <label for="mediaType" class="col-sm-2 control-label">Type</label>
+					   	<select class="form-control" ng-required='mmsMessage.partcontenttype_2' ng-model="mmsMessage.partcontenttype_2" ng-options="s as s for s in mimeTypes"></select> 	
+					</div>
+
+				</div>
+
+					<div class="form-inline">
+					<div class="form-group col-sm-2">
+					    &nbsp;
+					</div>
+					<div class="form-group">
+					    <label for="media" class="col-sm-2 control-label">Media</label>
+					    <input type="file" file-model="mmsMessage.partdata_3"/>	
+					</div>
+					 <div class="form-group">
+					    <label for="mediaType" class="col-sm-2 control-label">Type</label>
+					   	<select class="form-control" ng-required='mmsMessage.partcontenttype_3' ng-model="mmsMessage.partcontenttype_3" ng-options="s as s for s in mimeTypes"></select> 	
+					</div>
+
+				</div>
+			
+				 <div class="form-group">
+				  	<div class="col-sm-offset-2 col-sm-10">
+				  		<br/>
+					  <button type="submit" class="btn btn-default" ng-disabled="mmsMessageStatus">Send MMS</button>
+
+					  <br/>
+					  <br/>
+					  {{mmsSendStatus}}
+					</div>
+				  </div>						
+				</form>
+
+			</div>	
+		</div>
+		
+		</div>
+	</div>
+	
+	
+</div>
+					
+	
+		
+		
+	

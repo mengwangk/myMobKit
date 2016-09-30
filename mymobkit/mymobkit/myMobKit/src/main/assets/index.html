@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="mymobkit" id="ng-app"	ng-controller="AppCtrl">
+  <head>
+  
+	<!--[if lte IE 8]>
+		<script src="assets/js/json2.js"></script>
+	<![endif]-->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title ng-bind="pageTitle"></title>
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+	<link rel="shortcut icon" href="assets/images/favicon.ico" />
+	<link href="assets/css/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" text="text/css" />
+	<link href="assets/css/nanoscroller.css" rel="stylesheet" type="text/css" />
+
+  <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZoWG7EFLTuw6xknuhnwnT7rz38DJCjUc">
+  </script>
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/angular-grid/ng-grid.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/AngularJS-Toaster/toaster.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/nvd3/build/nv.d3.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/mymobkit-0.8.21.css" />
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="assets/mymobkit-0.8.21.js"></script>
+	
+  </head>
+  <body>
+    <div class="container-fluid" ng-show="!fullscreen">
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+            ng-click="menuCollapsed = ! menuCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href ui-sref="home" class="navbar-brand">{{deviceName}} </a>
+        </div>
+		
+        <div class="collapse navbar-collapse" uib-collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a href ui-sref="home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="surveillance">
+                <i class="fa fa-eye"></i>
+                Surveillance
+              </a>
+            </li>
+
+			     <li ui-sref-active="active">
+              <a href ui-sref="tracker">
+                <i class="fa fa-cog"></i>
+                Tracker
+              </a>
+            </li>
+			
+		        <li ui-sref-active="active">
+              <a href ui-sref="call">
+                <i class="fa fa-magic"></i>
+                Services
+              </a>
+            </li>
+			
+			     <li ui-sref-active="active">
+              <a href ui-sref="about">
+                <i class="fa fa-info"></i>&nbsp;&nbsp;About
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+	<div class="container-fuid" ui-view="main"></div>
+
+	<footer class="footer" ng-show="!fullscreen">
+		<div class="container-fluid" ng-show="!fullscreen">
+			<div class="footer-inner">			
+				<p align="center">
+					Copyright 2016 &copy; <a href="http://www.mymobkit.com"><strong>mymobkit.com</strong></a> -  <small>v0.8.21</small>
+				</p>
+				
+				<p align="center">
+					<span class="label label-default">Google Chrome or Mozilla Firefox browsers are preferred.</span>
+				</p>
+			</div>
+		</div>
+	</footer>
+	
+  </body>
+ 
+</html>

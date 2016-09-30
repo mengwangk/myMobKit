@@ -1,0 +1,70 @@
+describe('Surveillance controller', function() {
+	// mock Application to allow us to inject our own dependencies
+	beforeEach(angular.mock.module('mymobkit'));
+
+	// mock the controller for the same reason and include $rootScope and
+	// $controller
+	beforeEach(angular.mock.inject(function($rootScope, $controller,
+			_$httpBackend_) {
+		// create an empty scope
+		scope = $rootScope.$new();
+
+		scope.httpBackend = _$httpBackend_;
+		
+		scope.httpBackend.expect('GET', 'undefined/services/surveillance/url').respond(
+				{
+					"url" : 'http'
+				}
+				);
+		scope.httpBackend.expect('GET', 'http/processor/query').respond(
+				[
+				{
+					"height" : 480,
+					"width" : 800
+				}, {
+					"height" : 720,
+					"width" : 1280
+				}, {
+					"height" : 720,
+					"width" : 960
+				}, {
+					"height" : 480,
+					"width" : 800
+				}, {
+					"height" : 480,
+					"width" : 720
+				}, {
+					"height" : 480,
+					"width" : 640
+				}, {
+					"height" : 288,
+					"width" : 352
+				}, {
+					"height" : 240,
+					"width" : 320
+				}, {
+					"height" : 144,
+					"width" : 176
+				}
+
+				]);
+		scope.httpBackend.expect('GET', 'assets/config/canvas_size.json').respond(
+				[
+				{
+					"ratio" : 70
+				}
+				]);
+		
+		// declare the controller and inject our empty scope
+		$controller('SurveillanceCtrl', {
+			$scope : scope
+		});
+	}));
+
+	// tests start here
+	it('Resolutions available', function() {
+		scope.$digest();
+		scope.httpBackend.flush();
+		expect(scope.resolutions.length).toBeGreaterThan(1);
+	});
+});

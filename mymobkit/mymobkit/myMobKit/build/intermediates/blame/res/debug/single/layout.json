@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.2\\res\\layout\\place_autocomplete_item_prediction.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\viewer_widget_configure.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\viewer_widget_configure.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\viewer_widget.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\viewer_widget.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\navdrawer_content.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\navdrawer_content.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\toolbar_actionbar_viewer.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\toolbar_actionbar_viewer.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_home_narrow.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_home_narrow.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_webcam.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_webcam.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_about.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\dialog_about.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_introduction.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_introduction.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\toolbar_actionbar.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\toolbar_actionbar.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_live_view.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\fragment_live_view.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_viewer.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_viewer.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\alp_42447968_lock_pattern_activity_land.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\layout\\alp_42447968_lock_pattern_activity_land.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_photo_listview.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\fragment_photo_listview.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.2\\res\\layout\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\alp_42447968_view_group_progress_bar.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\layout\\alp_42447968_view_group_progress_bar.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\preference_seek_bar_dialog.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\preference_seek_bar_dialog.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_explore.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_explore.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.2\\res\\layout\\place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\tab_indicator.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\tab_indicator.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\photo_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\photo_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\navdrawer_separator.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\navdrawer_separator.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\navdrawer.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\navdrawer.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_list_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\drawer_list_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_photo_gallery_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\fragment_photo_gallery_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_viewer.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\fragment_viewer.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\device_list_details_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\device_list_details_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_photo_gallery.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\fragment_photo_gallery.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\navdrawer_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\navdrawer_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\notification.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\coach_mark.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\coach_mark.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\alp_42447968_lock_pattern_activity.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\layout\\alp_42447968_lock_pattern_activity.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\activity_webcam_service.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\activity_webcam_service.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\photo_gallery.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\photo_gallery.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.2\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\custom_alert.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\custom_alert.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\explore_item.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\layout\\explore_item.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+    }
+]

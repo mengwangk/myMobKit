@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug"><source path="C:\myspace\2016\Development\mymobkit\mymobkit\opencvlibrary300\build\intermediates\bundles\debug\assets"/></dataSet><dataSet config="main"><source path="C:\myspace\2016\Development\mymobkit\mymobkit\opencvlibrary300\src\androidTest\assets"/><source path="C:\myspace\2016\Development\mymobkit\mymobkit\opencvlibrary300\build\generated\assets\shaders\androidTest\debug"/></dataSet></merger>

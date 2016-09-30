@@ -1,0 +1,228 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Sensor API</h3>
+			</div>
+						
+			<br/>
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> Magnetic Field </h4>
+				<br/>
+				<p class="long-wrap">
+				<a href="{{sensorLink}}magnetic">{{sensorLink}}magnetic</a>
+				</p>
+			</div>	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"x":12.48,"y":40.559998,"z":9.66,
+				</code>
+				<br/>
+				<code>
+				"timestamp":"2016-09-24T22:34:21GMT+08:00",
+				</code>
+				<br/>
+				<code>
+				"description":"","requestMethod":"GET","isSuccessful":true
+				}
+				</code>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>   
+				<tr>
+					<td>
+						x
+					</td>
+				<td>
+					X magnetic field.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						y
+					</td>
+				<td>
+					Y magnetic field.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						z
+					</td>
+				<td>
+					Z magnetic field.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						timestamp
+					</td>
+				<td>
+					Timestamp the sensor data is captured.
+				</td>
+				</tr> 	      
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="isSuccessful">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+
+			<br/><br/>
+
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">Get</button> Accelerometer </h4>
+				<br/>
+				<p class="long-wrap">
+				<a href="{{sensorLink}}accelerometer">{{sensorLink}}accelerometer</a>
+				</p>
+			</div>	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+
+				{"x":-0.35434186,"y":1.2737153,"z":9.615114,
+				</code>
+				<br/>
+				<code>
+				"timestamp":"2016-09-24T22:41:01GMT+08:00",
+				</code>
+				<br/>
+				<code>
+				"description":"","requestMethod":"GET","isSuccessful":true
+				</code>
+				<br/>
+				<code>
+				}
+				</code>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>   
+				<tr>
+					<td>
+						x
+					</td>
+				<td>
+					X axis.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						y
+					</td>
+				<td>
+					Y axis.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						z
+					</td>
+				<td>
+					Z axis.
+				</td>
+				</tr>
+				<tr>
+					<td>
+						timestamp
+					</td>
+				<td>
+					Timestamp the sensor data is captured.
+				</td>
+				</tr> 	      
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="isSuccessful">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+
+
+			<!--
+			<nvd3 options="options"
+		      data="data"
+		      config="config"
+		      events="events"
+		      api="api"
+		      on-ready="callback"></nvd3>
+			-->
+			
+		</div>
+	</div>
+</div>

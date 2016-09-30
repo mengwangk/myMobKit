@@ -1,0 +1,232 @@
+# view res/layout/design_navigation_item.xml #generated:17
+-keep class android.support.design.internal.NavigationMenuItemView { <init>(...); }
+
+# view res/layout/design_navigation_menu.xml #generated:17
+-keep class android.support.design.internal.NavigationMenuView { <init>(...); }
+
+# view res/layout/design_bottom_sheet_dialog.xml #generated:17
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# view res/layout/design_layout_snackbar.xml #generated:18
+# view sw600dp-v13\res/layout-sw600dp-v13/design_layout_snackbar.xml #generated:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
+
+# view res/layout/activity_home_narrow.xml #generated:33
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/activity_about.xml #generated:1
+# view res/layout/activity_explore.xml #generated:1
+# view res/layout/activity_home_narrow.xml #generated:1
+# view res/layout/activity_webcam.xml #generated:2
+# view res/layout/viewer_widget_configure.xml #generated:1
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:75
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:40
+-keep class android.support.v4.widget.Space { <init>(...); }
+
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_mode_bar.xml #generated:19
+# view res/layout/abc_screen_toolbar.xml #generated:43
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:18
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# view res/layout/explore_item.xml #generated:8
+-keep class android.support.v7.widget.CardView { <init>(...); }
+
+# view res/layout/abc_screen_content_include.xml #generated:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:48
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# view res/layout/abc_dialog_title_material.xml #generated:22
+# view res/layout/abc_screen_simple.xml #generated:17
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:78
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:36
+# view res/layout/toolbar_actionbar.xml #generated:1
+# view res/layout/toolbar_actionbar_viewer.xml #generated:1
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# view res/layout/abc_screen_simple.xml #generated:25
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# view AndroidManifest.xml #generated:440
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:318
+-keep class com.google.android.gms.gcm.GcmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:463
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:471
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(...); }
+
+# view AndroidManifest.xml #generated:491
+-keep class com.google.firebase.iid.FirebaseInstanceIdInternalReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:476
+-keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:498
+-keep class com.google.firebase.iid.FirebaseInstanceIdService { <init>(...); }
+
+# view AndroidManifest.xml #generated:445
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:109
+-keep class com.mymobkit.app.AppController { <init>(...); }
+
+# view AndroidManifest.xml #generated:334
+-keep class com.mymobkit.gcm.AppGcmListenerService { <init>(...); }
+
+# view AndroidManifest.xml #generated:341
+-keep class com.mymobkit.gcm.AppInstanceIDListenerService { <init>(...); }
+
+# view AndroidManifest.xml #generated:348
+-keep class com.mymobkit.gcm.RegistrationIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:427
+-keep class com.mymobkit.mms.provider.MmsBodyProvider { <init>(...); }
+
+# view res/xml/pref_control_panel_services.xml #generated:105
+-keep class com.mymobkit.preference.LockPatternDialogPreference { <init>(...); }
+
+# view res/xml/pref_control_panel_services.xml #generated:124
+# view res/xml/pref_control_panel_services.xml #generated:132
+# view res/xml/pref_control_panel_services.xml #generated:153
+# view res/xml/pref_control_panel_services.xml #generated:7
+# view res/xml/pref_control_panel_services.xml #generated:93
+# view res/xml/pref_detection_settings.xml #generated:410
+-keep class com.mymobkit.preference.NonEmptyEditTextPreference { <init>(...); }
+
+# view res/xml/pref_control_panel_services.xml #generated:194
+# view res/xml/pref_control_panel_services.xml #generated:204
+# view res/xml/pref_detection_settings.xml #generated:159
+# view res/xml/pref_detection_settings.xml #generated:222
+# view res/xml/pref_detection_settings.xml #generated:36
+# view res/xml/pref_detection_settings.xml #generated:383
+# view res/xml/pref_detection_settings.xml #generated:79
+-keep class com.mymobkit.preference.SeekBarDialogPreference { <init>(...); }
+
+# view AndroidManifest.xml #generated:264
+-keep class com.mymobkit.receiver.MmsReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:299
+-keep class com.mymobkit.receiver.PhoneBootReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:304
+-keep class com.mymobkit.receiver.SmsReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:282
+-keep class com.mymobkit.service.HeadlessSmsSendService { <init>(...); }
+
+# view AndroidManifest.xml #generated:242
+-keep class com.mymobkit.service.HttpdService { <init>(...); }
+
+# view AndroidManifest.xml #generated:261
+-keep class com.mymobkit.service.RemoteStartupService { <init>(...); }
+
+# view AndroidManifest.xml #generated:364
+-keep class com.mymobkit.service.UssdService { <init>(...); }
+
+# view res/layout/activity_webcam_service.xml #generated:2
+-keep class com.mymobkit.service.webcam.WebcamLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:353
+-keep class com.mymobkit.service.webcam.WebcamService { <init>(...); }
+
+# view AndroidManifest.xml #generated:191
+-keep class com.mymobkit.ui.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.mymobkit.ui.activity.ControlPanelActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.mymobkit.ui.activity.ExploreActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:416
+-keep class com.mymobkit.ui.activity.IntroductionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:220
+-keep class com.mymobkit.ui.activity.ViewerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:409
+-keep class com.mymobkit.ui.activity.ViewerWidgetConfigureActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:421
+-keep class com.mymobkit.ui.activity.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:177
+-keep class com.mymobkit.ui.activity.WebcamActivity { <init>(...); }
+
+# view res/layout/fragment_photo_gallery.xml #generated:39
+-keep class com.mymobkit.ui.viewer.PhotoGalleryView { <init>(...); }
+
+# view res/layout/activity_home_narrow.xml #generated:26
+-keep class com.mymobkit.ui.widget.SlidingTabLayout { <init>(...); }
+
+# view res/layout/activity_viewer.xml #generated:1
+-keep class com.mymobkit.ui.widget.ViewerDrawerLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:395
+-keep class com.mymobkit.ui.widget.ViewerWidget { <init>(...); }
+
+# view res/layout/activity_webcam.xml #generated:19
+# view res/layout/activity_webcam_service.xml #generated:20
+-keep class com.mymobkit.webcam.Webcam { <init>(...); }
+
+# view res/layout/activity_webcam.xml #generated:28
+# view res/layout/activity_webcam_service.xml #generated:31
+-keep class com.mymobkit.webcam.WebcamOverlay { <init>(...); }
+
+# view AndroidManifest.xml #generated:224
+-keep class haibison.android.lockpattern.LockPatternActivity { <init>(...); }
+
+# view res/layout/alp_42447968_lock_pattern_activity.xml #generated:39
+# view res/layout/alp_42447968_lock_pattern_activity_land.xml #generated:81
+-keep class haibison.android.lockpattern.widget.LockPatternView { <init>(...); }
+
+# view AndroidManifest.xml #generated:451
+-keep class org.acra.dialog.CrashReportDialog { <init>(...); }
+
+# view AndroidManifest.xml #generated:458
+-keep class org.acra.sender.SenderService { <init>(...); }
+
+# view res/layout/fragment_live_view.xml #generated:32
+-keep class uk.co.senab.photoview.PhotoView { <init>(...); }
+

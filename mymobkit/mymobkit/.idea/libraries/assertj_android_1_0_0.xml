@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="assertj-android-1.0.0">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/ffmpeg/FFmpegAndroid/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ffmpeg/FFmpegAndroid/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/ffmpeg/FFmpegAndroid/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

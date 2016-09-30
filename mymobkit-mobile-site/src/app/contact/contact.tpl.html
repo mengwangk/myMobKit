@@ -1,0 +1,382 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar"
+			ng-include="'assets/view/services_sidebar.html'"></div>
+		<div class="col-md-9" id="content">
+
+			<div class="alert alert-info">
+				<h3 class="alert-heading">Contact API</h3>
+			</div>
+
+			<div class="alert alert-success">
+				<h4 class="alert-heading">
+					<button class="btn btn-default btn-xs">GET</button>
+					List Contact
+				</h4>
+				<p></p>
+				<br/> 
+				<p class="long-wrap">
+				<a ng-href="{{contactLink}}">{{contactLink}}</a>?name=<b>{name}</b>&number=<b>{number}</b>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr id="name">
+						<td nowrap>name</td>
+						<td>Contact name.</td>
+					</tr>
+
+					<tr id="number">
+						<td nowrap>number</td>
+						<td>Phone number.</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+
+				<p class="long-wrap">
+
+				<code>
+					{"contacts":[{"emails":[],"groups":[{"id":"7","name":"My
+					Contacts"}], </code>
+				<br />
+				<code>
+					"name":"Contact1","vCard":"BEGIN:VCARD\r\nVERSION:2.1\r\nN:;Contact1;;;
+				</code>
+				<br />
+				<code> \r\nFN:John Smith\r\nTEL;CELL:0123456789\r\nEND:VCARD\r\n",
+				</code>
+				<br />
+				<code>
+					"phones":[{"displayLabel":"Mobile","number":"0123456789","type":2}],"personId":1116}],
+				</code>
+				<br />
+				<code>"description":"","requestMethod":"GET","isSuccessful":true} </code>
+
+				</p>
+			</div>
+
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Field</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr id="contacts">
+						<td>contacts</td>
+						<td>A list of contact objects with the following fields <br />
+						<br />
+
+							<dl class="dl-horizontal">
+								<dt>emails</dt>
+								<dd>List of emails.</dd>
+								<dt>groups</dt>
+								<dd>List of groups.</dd>
+								<dt>name</dt>
+								<dd>Contact name.</dd>
+								<dt>vCard</dt>
+								<dd>Contact vCard</dd>
+								<dt>phones</dt>
+								<dd>List of phones.</dd>
+								<dt>personId</dt>
+								<dd>Unique identifier.</dd>
+								<dt>ringTone</dt>
+								<dd>Ringtone content URI.</dd>
+							</dl>
+
+						</td>
+					</tr>
+
+
+					<tr id="description">
+						<td>description</td>
+						<td>Contains the error message if isSuccessful is "false".</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>requestMethod</td>
+						<td>Request method. Default to "GET", "POST" or "DELETE"
+							depending on the HTTP method.</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>isSuccessful</td>
+						<td>true if operation is successful. Otherwise returns false.
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+			<div class="alert alert-success">
+				<h4 class="alert-heading">
+					<button class="btn btn-default btn-xs">POST</button>
+					Add Contact
+				</h4>
+				<p></p>
+				<br/> 
+				<p class="long-wrap">
+				{{contactLink}}
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr id="name">
+						<td nowrap>name</td>
+						<td>Display name.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>mobile</td>
+						<td>Mobile phone number.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>home</td>
+						<td>Home phone number.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>work</td>
+						<td>Work phone number.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>email</td>
+						<td>Email.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>company</td>
+						<td>Company name.</td>
+					</tr>
+
+					<tr>
+						<td nowrap>jobtitle</td>
+						<td>Job title.</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+
+				<p class="long-wrap">
+				<code>
+				{
+				    "contact": {
+				        "company": "",
+				        "displayName": "AAAAA",
+				</code>
+				<br />
+				<code>
+				        "email": "",
+				        "homeNumber": "",
+				        "jobTitle": "",
+				</code>
+				<br />
+				<code>
+				        "mobileNumber": "1212121",
+				        "workNumber": ""
+				    },
+				</code>
+				<br />
+				<code>
+				    "description": "",
+				    "requestMethod": "POST",
+				    "isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Field</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr id="contacts">
+						<td>contacts</td>
+						<td>Contact object with the following fields <br />
+						<br />
+
+							<dl class="dl-horizontal">
+								<dt>company</dt>
+								<dd>Company name.</dd>
+								<dt>displayName</dt>
+								<dd>Display name.dd>
+								<dt>email</dt>
+								<dd>Email.</dd>
+								<dt>homeNumber</dt>
+								<dd>Home phone number.</dd>
+								<dt>jobTitle</dt>
+								<dd>Job title.</dd>
+								<dt>mobileNumber</dt>
+								<dd>Mobile phone number.</dd>
+								<dt>workNumber</dt>
+								<dd>Work phone number.</dd>
+							</dl>
+
+						</td>
+					</tr>
+
+
+					<tr id="description">
+						<td>description</td>
+						<td>Contains the error message if isSuccessful is "false".</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>requestMethod</td>
+						<td>Request method. Default to "GET", "POST" or "DELETE"
+							depending on the HTTP method.</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>isSuccessful</td>
+						<td>true if operation is successful. Otherwise returns false.
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<div class="alert alert-success">
+				<h4 class="alert-heading">
+					<button class="btn btn-default btn-xs">DELETE</button>
+					Delete Contact
+				</h4>
+				<p></p>
+				<br/> 
+				<p class="long-wrap">
+				{{contactLink}}<b>{id}</b>
+				</p>
+			</div>
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td nowrap>id</td>
+						<td>Person id which is a unique identifier for the contact.</td>
+					</tr>				
+				</tbody>
+			</table>
+
+
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+
+				<p class="long-wrap">
+				<code>
+				{
+			    "count": 1,
+			    "description": "Successfully deleted the contact with id 35976",
+			    </code>
+				<br />
+				<code>
+			    "requestMethod": "DELETE",
+			    "isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+
+
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Field</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>count</td>
+						<td>Number of deleted contact. Should be 1 if the deletion is successful.</td>
+					</tr>
+
+					<tr id="description">
+						<td>description</td>
+						<td>Contains the error message if isSuccessful is "false".</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>requestMethod</td>
+						<td>Request method. Default to "GET", "POST" or "DELETE"
+							depending on the HTTP method.</td>
+					</tr>
+
+					<tr id="requestMethod">
+						<td>isSuccessful</td>
+						<td>true if operation is successful. Otherwise returns false.
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+
+
+			<div class="alert alert-info">
+				<p>
+				<h4 id="contactusage" class="alert-heading">Usage </h3>
+				<a name="contactusage">
+				</p> <br/>				
+				 <div class="gridStyle" ng-grid="contactGrid">
+				</div>	
+			</div>
+			
+
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+

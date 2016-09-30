@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseTheme">
+        <attr name="actionBarIconColor" format="color" />
+        <attr name="actionBarInsetStart" format="dimension" />
+        <attr name="spinnerBarInsetStart" format="dimension" />
+        <attr name="popupItemBackground" format="reference" />
+        <attr name="photoItemForeground" format="reference" />
+        <attr name="photoItemForegroundBorderless" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SeekBarDialogPreference">
+        <attr name="android:max" />
+        <attr name="min" format="integer" />
+        <attr name="progressTextSuffix" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CameraViewBase">
+        <attr name="cameraId" format="integer">
+            <enum name="any" value="-1" />
+            <enum name="back" value="99" />
+            <enum name="front" value="98" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ThemeMyMobKit">
+        <attr name="isFloatingWindow" format="boolean" />
+    </declare-styleable>
+
+</resources>

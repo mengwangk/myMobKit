@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_alert.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_alert.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_video.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_video.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_save.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_save.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_live_view.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_live_view.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_messaging.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_messaging.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_browser.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_browser.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_drawer_viewer.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_drawer_viewer.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_widget.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_widget.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_storage.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_storage.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_detection.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_detection.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_streaming.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_streaming.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_overflow_menu.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_overflow_menu.png"
+    },
+    {
+        "merged": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi\\ic_security.png",
+        "source": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\main\\res\\mipmap-xhdpi\\ic_security.png"
+    }
+]

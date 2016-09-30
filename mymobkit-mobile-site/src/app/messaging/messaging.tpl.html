@@ -1,0 +1,834 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" id="sidebar" ng-include="'assets/view/services_sidebar.html'"></div>
+		
+		
+		<div class="col-md-9" id="content">
+			
+			<div class="alert alert-info">
+				<h3 class="alert-heading">SMS API</h3>
+			</div>
+			
+			<div class="alert alert-warning">
+			<strong>
+				For Android 4.4 KitKat and above, in order for SMS update/delete to work, myMobKit has to be configured
+				as the default SMS app. This can be configured through myMobKit menu or Android settings.
+			</strong>
+			</div>
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Configuration Parameters </h4> 
+				<p class="long-wrap">
+				{{parameterLink}}
+				</p>
+				
+				<br/><br/>
+				
+				<form class="form-horizontal" role="form" ng-submit="submitMessagingForm()">
+				  <div class="form-group">
+					<label for="preferences_messaging_aging_method" class="col-sm-4 control-label">Housekeeping</label>
+					<div class="col-sm-3">
+						<select class="form-control" id="preferences_messaging_aging_method" ng-model="messagingForm.preferences_messaging_aging_method">
+							  <option value="Days">Days</option>
+							  <option value="Size">Size</option>
+						</select>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="preferences_messaging_aging_days" class="col-sm-4 control-label">Aging days</label>
+					<div class="col-sm-3">
+					  <input type="number" class="form-control" ng-model="messagingForm.preferences_messaging_aging_days" id="preferences_messaging_aging_days" ng-minlength="1" ng-maxlength="30" min="1" max="30" placeholder="Aging days"/>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="preferences_messaging_aging_size" class="col-sm-4 control-label">Number of messages</label>
+					<div class="col-sm-3">
+					  <input type="number" class="form-control" ng-model="messagingForm.preferences_messaging_aging_size" id="preferences_messaging_aging_size" ng-minlength="0" ng-maxlength="1000" min="0" max="1000" placeholder="Number of messages"/>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-sm-offset-4 col-sm-10">
+					  <div class="checkbox">
+						<label>
+						  <input type="checkbox" ng-model="messagingForm.preferences_saved_sent_messages"  id="preferences_saved_sent_messages" ng-true-value="'true'" ng-false-value="'false'" /> Save sent messages
+						</label>
+					  </div>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-sm-offset-4 col-sm-10">
+					  <button type="submit" class="btn btn-default" ng-disabled="messageFormStatus">Save</button>
+					</div>
+				  </div>
+				</form>
+				
+				<br/>
+				{{ saveStatus}}
+			</div>
+			
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="preferences_messaging_aging_method">
+						<td>
+							preferences_messaging_aging_method
+						</td>
+					<td>
+						Housekeeping the internal message storage either by "Days" or "Size" (number of records).
+					</td>
+					</tr>
+					
+					<tr id="preferences_messaging_aging_days">
+						<td>
+							preferences_messaging_aging_days
+						</td>
+						<td>
+							Number of days to keep the messages in the internal storage, range from 1 to 30 days.
+						</td>
+					</tr>
+					
+					<tr id="preferences_messaging_aging_size">
+						<td>
+							preferences_messaging_aging_size
+						</td>
+						<td>
+							Number of records to keep, range from 0 to 1000.
+						</td>
+					</tr>
+					
+					<tr id="preferences_saved_sent_messages">
+						<td>
+							preferences_saved_sent_messages
+						</td>
+						<td>
+							Save the sent messages in device sent folder.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+			
+				<p class="long-wrap">
+				<code>
+				{
+					"description": "",
+					"requestMethod": "POST",
+					"isSuccessful": true
+				}
+				</code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="description">
+					<td>
+						description
+					</td>
+				<td>
+					Contains the error message if isSuccessful is "false".
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						requestMethod
+					</td>
+				<td>
+					Request method. Default to "GET", "POST" or "DELETE" depending on the HTTP method.
+				</td>
+				</tr>
+				
+				<tr id="requestMethod">
+					<td>
+						isSuccessful
+					</td>
+				<td>
+					true if operation is successful. Otherwise returns false.
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+			
+			
+			<br/><br/>
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> List SMS </h4> 
+				<p></p> <br>
+				<p class="long-wrap">
+				<a ng-href="{{allMessagesLink}}">{{allMessagesLink}}</a>?to=<b>{to}</b>&from=<b>{from}</b>&datesent=<b>{datesent}</b>&page=<b>{page}</b>&pagesize=<b>{pagesize}</b>&threadid=<b>{threadid}</b>&status=<b>{status}</b>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="To">
+						<td>
+							To
+						</td>
+					<td>
+						Lists all SMS messages sent to this number.
+					</td>
+					</tr>
+					
+					<tr id="From">
+						<td>
+							From
+						</td>
+					<td>
+						Lists all SMS messages sent from this number.
+					</td>
+					</tr>
+					
+					<tr id="DateSent">
+						<td>
+							DateSent
+						</td>
+					<td>
+						Lists all SMS messages sent beginning on or from a certain date. 
+						<p>
+						Date range can be specified using inequalities like DateSent=<b>>=YYYY-MM-DD</b> or DateSent=<b><=YYYY-MM-DD</b>.
+						</p>
+						<p>
+						Accepted symbols are "=", ">", ">=", "<" and "<=".
+						</p>
+						<p>
+						Sample URL patterns are shown below<br/>
+						<br/>
+						Greater than "2016-02-14"
+						<br/>/services/api/messaging/?datesent=<b>>=2016-02-14</b>
+						<br/><br/>
+						Equal to "2016-02-14"
+						<br/>/services/api/messaging/?datesent=<b>=2016-02-14</b>
+						</p>
+					</td>
+					</tr>
+					
+					<tr id="Page">
+						<td>
+							Page
+						</td>
+					<td>
+						Used to return a particular page within the list. Must be used together with the PageSize parameter.
+					</td>
+					</tr>
+					
+					<tr id="PageSize">
+						<td>
+							PageSize
+						</td>
+					<td>
+						Used to specify the amount of list items to return per page.
+					</td>
+					</tr>
+					
+					<tr id="ThreadID">
+						<td>
+							ThreadID
+						</td>
+					<td>
+						Used to retrieve messages belonging to the same conversation.
+					</td>
+					</tr>
+					
+					<tr id="Status">
+						<td>
+							Status
+						</td>
+					<td>
+						0 for unread messages, 1 for read messages. Other values will be ignored.
+					</td>
+					</tr>
+				</tbody>
+			</table>
+	
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"messages":[{"date":"2014-11-22T18:13:01GMT+08:00","id":"2175","message":"hi how are you?",
+				</code><br/><code>
+				"messageType":"MESSAGE_TYPE_INBOX","number":"+1234567890","receiver":"Me","sender":"Alice"
+				</code><br/><code>
+				"threadID":301, "read":true}],
+				</code><br/><code>
+				"description":"","requestMethod":"GET","isSuccessful":true}
+				</code>
+				</p>
+			</div>
+			
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="messages">
+					<td>
+						messages
+					</td>
+					
+				<td>
+					A list of message object with the following fields
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>date</dt>
+					  <dd>Message timestamp.</dd>
+					  <dt>id</dt>
+					  <dd>Unique message id.</dd>
+					  <dt>message</dt>
+					  <dd>Message content.</dd>
+					  <dt>messageType</dt>
+					  <dd>Message type which can be MESSAGE_TYPE_INBOX, MESSAGE_TYPE_SENT, MESSAGE_TYPE_OUTBOX, MESSAGE_TYPE_FAILED or MESSAGE_TYPE_QUEUED.</dd>
+					  <dt>number</dt>
+					  <dd>Phone number of the sender or receiver.</dd>
+					  <dt>receiver</dt>
+					  <dd>Receiver name or number.</dd>
+					  <dt>sender</dt>
+					  <dd>Sender name or number.</dd>
+					  <dt>threadID</dt>
+					  <dd>Message thread ID to identify the grouping of the messages.</dd>
+					  <dt>read</dt>
+					  <dd>true if message is read.</dd>
+					  <dt>serviceCenter</dt>
+					  <dd>Service center address.</dd>
+					</dl>
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>			
+			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> View SMS </h4>
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>{id}</b>
+				</p>	
+			</div>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"messages":[{"date":"2014-11-22T18:13:01GMT+08:00","id":"2103","message":"How are you doing?",</code>
+				<br/>
+				<code>"messageType":"MESSAGE_TYPE_SENT","number":"1234567890","receiver":"Alice", </code><br/><code>
+				"sender":"Me","threadID":313,"read":true}], </code><br/><code>"description":"","requestMethod":"GET","isSuccessful":true}</code>
+				</p>
+			</div>
+			
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">POST</button> Send SMS </h4>
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}	
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="To">
+						<td>
+							To
+						</td>
+						<td>
+							The destination number or contact name.
+						</td>
+					</tr>
+					
+					<tr id="To">
+						<td>
+							Message
+						</td>
+						<td>
+							Message content.
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							DeliveryReport
+						</td>
+						<td>
+							Optional parameter. 0 for no delivery report, any other values indicate delivery report is required. 
+							Default to 1 to receive delivery report.
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							ScAddress
+						</td>
+						<td>
+							Optional parameter to specify the service center address to be used to send SMS. <br/><br/>
+							
+							For dual SIMs with different providers, you can provide this address to use a specific SIM card to send SMS.
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							Slot 
+						</td>
+						<td>
+							Optional parameter to specify the SIM card to be used to send SMS. Only applicable for dual SIM phone. <br/><br/>
+							1 for SIM slot 1, 2 for SIM slot 2. Default to the default configured active network.	
+							
+							<br/><br/>
+							Use the ScAddress parameter to target a specific SIM card. Use this parameter only when the service center address is different between the 2 SIM cards.						
+						</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+					"message": {
+						"date": "2014-11-22T18:13:01GMT+08:00",
+						"to": "Alice",
+						"id": "7754325357517385744",
+				</code><br/><code>
+						"number": "1234567890",	
+						"message": "how are you?",
+						"read": false						
+				</code><br/><code>
+					},
+					"description": "",
+					"requestMethod": "POST",
+					"isSuccessful": true
+				}
+			   </code>
+				</p>
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="message">
+					<td>
+						message
+					</td>
+					
+				<td>
+					Message object containing the following fields for the sent message.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>date</dt>
+					  <dd>Message timestamp.</dd>
+					  <dt>to</dt>
+					  <dd>Receiver name or number.</dd>
+					  <dt>id</dt>
+					  <dd>A <b>unique identifier</b> that can be used to check the message status.</dd>
+					  <dt>number</dt>
+					  <dd>Phone number of the receiver.</dd>					  
+					</dl>					
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>
+			
+			
+			<div class="alert alert-success">
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">GET</button> Check SMS Status </h4>
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}status/<b>{unique identifier}</b>
+				</p>	
+			</div>
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{"message":{"answerTo":"unknown","date":"2014-11-22T18:13:01GMT+08:00",</code><br/><code>"to":"Alice","id":"7754325357517385744",
+				"number":"1234567890"},"status":"Failed",</code><br/><code>"description":"","requestMethod":"GET","isSuccessful":true} </code>
+				</p>
+			</div>
+			
+				<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="message">
+					<td>
+						message
+					</td>
+					
+				<td>
+					Message object containing the following fields for the sent message.
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>answerTo</dt>
+					  <dd>Reply name or number.</dd>
+					  <dt>date</dt>
+					  <dd>Message timestamp</dd>
+					  <dt>to</dt>
+					  <dd>Receiver name or number.</dd>
+					  <dt>id</dt>
+					  <dd>Message unique identifier.</dd>		
+					  <dt>number</dt>
+					  <dd>Receiver number.</dd>							  
+					</dl>
+				</td>
+				</tr>
+				
+				<tr id="status">
+					<td>
+						status
+					</td>
+					
+				<td>
+					Messaging sending status, which can be "Sent", "Delivered", "Queued" or "Failed".
+				</td>
+				</tr>
+				
+				<tr id="description">
+					<td>
+						description
+					</td>
+					
+				<td>
+					Contains the error code if the status is "Failed".
+					
+					<br/><br/>
+					
+					<dl class="dl-horizontal">
+					  <dt>0</dt>
+					  <dd>Operation canceled.</dd>		
+					  <dt>1</dt>
+					  <dd>Generic failure.</dd>
+					  <dt>2</dt>
+					  <dd>Network/radio turned off explicitly.</dd>
+					  <dt>3</dt>
+					  <dd>No PDU provided.</dd>
+					  <dt>4</dt>
+					  <dd>Service is currently unavailable.</dd>	
+					  <dt>5</dt>
+					  <dd>Reached the sending queue limit.</dd>	
+					  <dt>6</dt>
+					  <dd>FDN (Fixed Dialing Number) is enabled.</dd>						  
+					</dl>
+					
+				</td>
+				</tr>
+				
+				
+			</tbody>
+			</table>
+			
+			
+			
+			<div class="alert alert-success">				
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">PUT</button> Update SMS Read Status</h4>
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>{id}</b>
+				</p>
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>?id={id_list}</b>
+				</p>	
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="id">
+						<td>
+							id
+						</td>
+						<td>
+							Message id to update. If not provided then all unread messages are updated to READ status.
+						</td>
+					</tr>
+					<tr id="id_list">
+						<td>
+							id_list
+						</td>
+						<td>
+							List of message ids separated by comma.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+					"count": 3,
+					"description": "Updated all unread messages to read",
+				</code><br/><code>
+					"requestMethod": "PUT",
+					"isSuccessful": true
+				}
+				</code>
+				</p>
+
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="message">
+					<td>
+						count
+					</td>
+					
+				<td>
+					Number of updated messages.							
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>
+			
+			
+			
+			
+			<div class="alert alert-success">				
+				<p>
+				<h4 class="alert-heading"> <button class="btn btn-default btn-xs">DELETE</button> Delete SMS </h3>
+				</p> <br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>{id}</b>
+				</p>	
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>?id={id_list}</b>
+				</p>	
+				<br/>
+				<p class="long-wrap">
+				{{allMessagesLink}}<b>?threadid={thread_id}</b>
+				</p>	
+			</div>
+			
+			<table id="sms_api_doc" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				
+				<tbody>    	      
+					<tr id="id">
+						<td>
+							id
+						</td>
+						<td>
+							Message id to delete. Compulsory value which must be provided.
+						</td>
+					</tr>
+					<tr id="id_list">
+						<td>
+							id_list
+						</td>
+						<td>
+							List of message ids separated by comma.
+						</td>
+					</tr>
+					<tr id="thread_id">
+						<td>
+							thread_id
+						</td>
+						<td>
+							Message thread id to delete.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<div class="alert alert-warning">
+				<h4 class="alert-heading">Response</h4>
+				<p class="long-wrap">
+				<code>
+				{
+					"count": 1,
+					"description": "Successfully deleted the message with id 2176",
+				</code><br/><code>
+					"requestMethod": "DELETE",
+					"isSuccessful": true
+				}</code>
+				</p>
+			</div>
+			
+			
+			<table id="sms_api_doc" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Field</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			
+			<tbody>    	      
+				<tr id="message">
+					<td>
+						count
+					</td>
+				<td>
+					Number of deleted messages.							
+				</td>
+				</tr>
+				
+			</tbody>
+			</table>
+			
+			<div class="alert alert-info">
+				<p>
+				<h4 class="alert-heading">Usage </h4>
+				</p> <br/>				
+				 <div class="gridStyle" ng-grid="messageGrid">
+				</div>	
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<span class="glyphicon glyphicon-comment"></span> Messaging
+							</div>
+							<div class="panel-body">
+								<ul class="chat">
+								
+									<li ng-repeat="msg in currentConversation.messages|orderBy:'id'" class="{{ getListAlignment(msg) }}" scrollglue>
+									
+										<span ng-if="msg.sender.toUpperCase() == 'ME'" class="chat-img pull-left">
+											<img src="assets/images/ME.gif" alt="User Avatar" class="img-circle">
+										</span>
+										
+										<span ng-if="msg.sender.toUpperCase() != 'ME'" class="chat-img pull-right">
+											<img src="assets/images/U.gif" alt="User Avatar" class="img-circle">
+										</span>
+									
+										<div class="chat-body clearfix" ng-if="msg.sender.toUpperCase() == 'ME'" id="chatMsg_{{$index}}">
+										
+											<div class="header">
+												<strong class="primary-font">{{msg.sender}}</strong> <small class="pull-right text-muted">
+													<span class="glyphicon glyphicon-time"></span>{{msg.date}}</small>
+											</div>
+											<p>
+												{{msg.message}}
+											</p>
+										</div>
+										
+										<div class="chat-body clearfix" ng-if="msg.sender.toUpperCase() != 'ME'" id="chatMsg_{{$index}}">
+										
+											<div class="header">
+												<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>{{msg.date}}</small>
+												<strong class="pull-right primary-font">{{msg.sender}}</strong>
+											</div>
+											<p>
+												{{msg.message}}
+											</p>
+										</div>
+										
+									</li>							
+									
+								</ul>
+							</div>
+							<div class="panel-footer">
+								<div class="input-group">
+									<input ng-model="btnMessage" name="btnMessage" required type="text" class="form-control input-sm" placeholder="Type your message here..." ng-enter="onSendMessage()"/>
+									<span class="input-group-btn">
+										<button class="btn btn-primary btn-sm" id="btnChat" ng-click="onSendMessage()">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+										<!--<button class="btn btn-success btn-sm" id="btnRefresh" ng-click="onRefreshConveration()">Refresh</button>-->
+									</span>									 								
+								</div>
+							</div>
+							<a id="bottom"></a>	
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	
+	
+</div>
+					
+	
+		
+		
+	

@@ -1,0 +1,351 @@
+[
+    {
+        "outputFile": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 5,
+                    "endColumn": 14,
+                    "endOffset": 272
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 5,
+                        "endColumn": 14,
+                        "endOffset": 272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 277,
+                    "endColumn": 60,
+                    "endOffset": 333
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 277,
+                        "endColumn": 60,
+                        "endOffset": 333
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 338,
+                    "endColumn": 62,
+                    "endOffset": 396
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 338,
+                        "endColumn": 62,
+                        "endOffset": 396
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 401,
+                    "endColumn": 75,
+                    "endOffset": 472
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 401,
+                        "endColumn": 75,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 477,
+                    "endColumn": 56,
+                    "endOffset": 529
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 477,
+                        "endColumn": 56,
+                        "endOffset": 529
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 534,
+                    "endColumn": 57,
+                    "endOffset": 587
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 534,
+                        "endColumn": 57,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 592,
+                    "endColumn": 88,
+                    "endOffset": 676
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 592,
+                        "endColumn": 88,
+                        "endOffset": 676
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 681,
+                    "endColumn": 90,
+                    "endOffset": 767
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 681,
+                        "endColumn": 90,
+                        "endOffset": 767
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 772,
+                    "endColumn": 93,
+                    "endOffset": 861
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 772,
+                        "endColumn": 93,
+                        "endOffset": 861
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 866,
+                    "endColumn": 88,
+                    "endOffset": 950
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 866,
+                        "endColumn": 88,
+                        "endOffset": 950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 955,
+                    "endColumn": 95,
+                    "endOffset": 1046
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 955,
+                        "endColumn": 95,
+                        "endOffset": 1046
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1051,
+                    "endColumn": 91,
+                    "endOffset": 1138
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1051,
+                        "endColumn": 91,
+                        "endOffset": 1138
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1143,
+                    "endColumn": 91,
+                    "endOffset": 1230
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1143,
+                        "endColumn": 91,
+                        "endOffset": 1230
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1235,
+                    "endColumn": 79,
+                    "endOffset": 1310
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1235,
+                        "endColumn": 79,
+                        "endOffset": 1310
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1315,
+                    "endColumn": 97,
+                    "endOffset": 1408
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1315,
+                        "endColumn": 97,
+                        "endOffset": 1408
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1413,
+                    "endColumn": 94,
+                    "endOffset": 1503
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1413,
+                        "endColumn": 94,
+                        "endOffset": 1503
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1508,
+                    "endColumn": 71,
+                    "endOffset": 1575
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1508,
+                        "endColumn": 71,
+                        "endOffset": 1575
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1580,
+                    "endColumn": 93,
+                    "endOffset": 1669
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\exploded-aar\\org.bitbucket.haibison\\android-lockpattern\\9.0.0\\res\\values-en\\values-en.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1580,
+                        "endColumn": 93,
+                        "endOffset": 1669
+                    }
+                }
+            }
+        ]
+    }
+]

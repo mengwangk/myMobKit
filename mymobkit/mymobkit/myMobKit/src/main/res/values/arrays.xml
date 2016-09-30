@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="control_panel_string_array">
+        <item>Control Panel</item>
+        <!--          <item>Messaging</item> -->
+        <item>Surveillance</item>
+        <!--<item>Streaming</item>-->
+    </string-array>
+
+</resources>

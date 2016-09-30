@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="alp_42447968_pmsg_connect_x_dots">
+        <item quantity="one">至少需要%1$d個節點.\n請再試一次...</item>
+        <item quantity="other">至少需要%1$d個節點.\n請再試一次...</item>
+    </plurals>
+    <string name="alp_42447968_cmd_confirm">確認</string>
+    <string name="alp_42447968_cmd_continue">繼續</string>
+    <string name="alp_42447968_cmd_forgot_pattern">忘記圖形鎖?</string>
+    <string name="alp_42447968_cmd_retry">重試</string>
+    <string name="alp_42447968_loading">讀取中…</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cell_added">新增了一個節點</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cleared">清除圖形鎖</string>
+    <string name="alp_42447968_lockscreen_access_pattern_detected">圖形鎖節點新增完成</string>
+    <string name="alp_42447968_lockscreen_access_pattern_start">開始設定圖形鎖</string>
+    <string name="alp_42447968_msg_connect_4dots">至少需要繞過四個節點.\n請再試一次...</string>
+    <string name="alp_42447968_msg_draw_an_unlock_pattern">畫出圖形解鎖:</string>
+    <string name="alp_42447968_msg_draw_pattern_to_unlock">請解開圖形鎖:</string>
+    <string name="alp_42447968_msg_pattern_recorded">圖形鎖已儲存!</string>
+    <string name="alp_42447968_msg_redraw_pattern_to_confirm">再次確認圖形鎖:</string>
+    <string name="alp_42447968_msg_release_finger_when_done">完成後請放開手指</string>
+    <string name="alp_42447968_msg_try_again">很抱歉，請再試一次</string>
+    <string name="alp_42447968_msg_your_new_unlock_pattern">設定新的圖形鎖:</string>
+</resources>

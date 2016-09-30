@@ -1,0 +1,7 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_viewer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:divider="@color/list_divider"
+    android:dividerHeight="1dp"
+    android:listSelector="@drawable/list_row_selector" />

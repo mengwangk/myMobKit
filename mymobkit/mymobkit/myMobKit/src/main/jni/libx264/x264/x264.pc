@@ -1,0 +1,11 @@
+prefix=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x264
+Description: H.264 (MPEG4 AVC) encoder library
+Version: 0.148.2638 7599210
+Libs: -L${exec_prefix}/lib -lx264 -lm -ldl
+Libs.private: 
+Cflags: -I${prefix}/include

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg/FFmpegAndroid/FFmpegAndroid.iml" filepath="$PROJECT_DIR$/ffmpeg/FFmpegAndroid/FFmpegAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myMobKit/myMobKit.iml" filepath="$PROJECT_DIR$/myMobKit/myMobKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mymobkit.iml" filepath="$PROJECT_DIR$/mymobkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opencvlibrary300/opencvlibrary300.iml" filepath="$PROJECT_DIR$/opencvlibrary300/opencvlibrary300.iml" />
+    </modules>
+  </component>
+</project>

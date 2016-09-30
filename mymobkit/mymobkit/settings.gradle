@@ -1,0 +1,8 @@
+include ':opencvlibrary300', ':FFmpegAndroid'
+include ':myMobKit'
+//include ':ffmpeg'
+//include ':ffmpeg:app'
+//include ':ffmpeg:FFmpegAndroid'
+// include ':crosswalk-webview-19.49.514.5-arm'
+project(':FFmpegAndroid').projectDir = new File('ffmpeg/FFmpegAndroid')
+//project(':app').projectDir = new File('ffmpeg/app')

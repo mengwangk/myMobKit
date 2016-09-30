@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="alp_42447968_pmsg_connect_x_dots">
+        <item quantity="one">至少需要%1$d个点.\n请重试...</item>
+        <item quantity="other">至少需要%1$d个点.\n请重试...</item>
+    </plurals>
+    <string name="alp_42447968_cmd_confirm">确认</string>
+    <string name="alp_42447968_cmd_continue">继续</string>
+    <string name="alp_42447968_cmd_forgot_pattern">忘记手势密码?</string>
+    <string name="alp_42447968_cmd_retry">重试</string>
+    <string name="alp_42447968_loading">加载中…</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cell_added">添加了一个点</string>
+    <string name="alp_42447968_lockscreen_access_pattern_cleared">清空手势</string>
+    <string name="alp_42447968_lockscreen_access_pattern_detected">手势绘制完成</string>
+    <string name="alp_42447968_lockscreen_access_pattern_start">开始绘制手势</string>
+    <string name="alp_42447968_msg_connect_4dots">至少需要4个点.\n请重试...</string>
+    <string name="alp_42447968_msg_draw_an_unlock_pattern">请绘制解锁图案:</string>
+    <string name="alp_42447968_msg_draw_pattern_to_unlock">绘制图案来解锁:</string>
+    <string name="alp_42447968_msg_pattern_recorded">手势已被记录!</string>
+    <string name="alp_42447968_msg_redraw_pattern_to_confirm">重绘图案以确认:</string>
+    <string name="alp_42447968_msg_release_finger_when_done">完成后请抬起手指</string>
+    <string name="alp_42447968_msg_try_again">对不起,请重试</string>
+    <string name="alp_42447968_msg_your_new_unlock_pattern">您的新解锁图案:</string>
+    <string name="dialog_title">评价 %s</string>
+    <string name="later">稍后再来</string>
+    <string name="no_thanks">残忍拒绝</string>
+    <string name="rate">立即评价</string>
+    <string name="rate_message">如果您喜欢这款应用，请您花费一点点时间给我们些评价，谢谢您的支持！</string>
+</resources>

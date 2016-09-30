@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- New style -->
+    <color name="transparent">#00000000</color>
+
+    <color name="body_text_1">#de000000</color>
+    <color name="body_text_2">#8a000000</color>
+    <color name="body_text_3">#60000000</color>
+    <color name="body_text_disabled">#44000000</color>
+
+    <color name="body_text_1_inverse">#deffffff</color>
+    <color name="body_text_2_inverse">#8affffff</color>
+
+    <color name="theme_primary">#3f51b5</color>
+    <color name="theme_primary_dark">#303f9f</color>
+    <color name="theme_primary_light">#7986cb</color>
+
+    <color name="theme_accent_1">#00b0ff</color>
+    <color name="theme_accent_1_light">#8ad4fa</color>
+
+    <color name="theme_accent_2">#e91e63</color>
+
+    <color name="all_track_color">#ff222222</color>
+    <color name="home_pane_header">#99000000</color>
+
+    <color name="sliding_pane_content_fade">#cceeeeee</color>
+    <color name="sticky_block_background">#ddffffff</color>
+
+    <color name="gray_background">#e5e5e5</color>
+    <color name="dark_divider">#32000000</color>
+
+    <color name="navdrawer_background">#ffffffff</color>
+    <color name="navdrawer_text_color">@color/body_text_1</color>
+    <color name="navdrawer_text_color_selected">@color/theme_primary</color>
+    <color name="navdrawer_icon_tint">#888</color>
+    <color name="navdrawer_icon_tint_selected">@color/theme_primary</color>
+
+    <color name="list_dropdown_foreground_normal">#ff333333</color>
+    <color name="list_dropdown_divider_color">#92a3a3a3</color>
+
+    <color name="translucent_actionbar_background">#cc3f51b5</color>
+    <color name="translucent_statusbar_background">#cc3f51b5</color>
+
+    <color name="tab_background">@color/theme_primary</color>
+    <color name="tab_selected_strip">@color/theme_accent_1</color>
+
+
+    <color name="light_gray">#E8E8E8</color>
+    <color name="sky_blue">#7EC0EE</color>
+    <color name="title">#3F6077</color>
+    <color name="subsubtitle">#666666</color>
+    <color name="overflow_menu">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+
+    <!-- New Style -->
+
+</resources>

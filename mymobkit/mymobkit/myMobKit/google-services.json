@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1068561572745",
+    "firebase_url": "https://phone-kit.firebaseio.com",
+    "project_id": "phone-kit",
+    "storage_bucket": "phone-kit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068561572745:android:1c1756d0190031a2",
+        "android_client_info": {
+          "package_name": "com.mymobkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068561572745-1mb4s72pnt6qep161cq3ulk554602lo1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mymobkit",
+            "certificate_hash": "2C80E6A20447A1A2F92AC6F8119EBC5A3F7C5800"
+          }
+        },
+        {
+          "client_id": "1068561572745-crvabq8010h7mr46mjta0qfadskaoi2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw0vGmlTGIT8Rcj4DTpTI7PEazxpxnKxQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068561572745-crvabq8010h7mr46mjta0qfadskaoi2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

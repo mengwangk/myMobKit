@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">myMobKit</string>
+    <string name="mymobkit_url">http://www.mymobkit.com</string>
+    <string name="label_title_settings">Settings</string>
+    <string name="label_title_camera">Surveillance</string>
+    <string name="label_title_about">About</string>
+    <string name="label_title_upgrade">myMobKit Upgrade</string>
+    <string name="label_title_default_sms_app">Configure Default App</string>
+    <string name="label_video_streaming">Camera Mode</string>
+    <string name="label_video_preference">Camera &amp; Video Preferences</string>
+    <string name="label_viewer_mode">Viewer Mode</string>
+    <string name="label_configure_viewer">@string/app_name</string>
+    <string name="label_explore">Explore</string>
+    <string name="label_alarm">Alert &amp; Storage</string>
+    <string name="label_general_settings">General Settings</string>
+    <string name="label_motion_detection">Motion Detection</string>
+    <string name="label_face_detection">Face Detection</string>
+    <string name="label_control_panel">Settings</string>
+    <!-- Accessibility description saying that the app's navigation drawer has been closed -->
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Accessibility description saying that the app's navigation drawer has been opened -->
+    <string name="drawer_open">Open navigation drawer</string>
+
+    <!-- Menu item to open the screen [CHAR_LIMIT=20] -->
+    <string name="msg_error">Unable to connect to network</string>
+    <string name="msg_lock_pattern_not_configured">Lock pattern not configured</string>
+    <string name="camera_front">Front Camera</string>
+    <string name="camera_back">Back Camera</string>
+    <string name="camera_url_show">Show Message</string>
+    <string name="camera_url_hide">Hide Message</string>
+    <string name="msg_camera_caption">Triggered: %1$s\t URL: %2$s</string>
+    <string name="msg_email_error">Unable to send email notification. Verify your Gmail configuration</string>
+    <string name="msg_sms_error">Unable to send SMS notification</string>
+    <string name="label_options"><u>Options</u></string>
+
+
+    <string-array name="camera_video_menu">
+        <item>@string/camera_url_hide</item>
+        <item>@string/camera_front</item>
+        <item>Resolution</item>
+        <item>Fade</item>
+        <item>Lock</item>
+        <item>Settings</item>
+        <item>Quit</item>
+    </string-array>
+
+    <string-array name="camera_video_service_menu">
+        <item>@string/camera_url_hide</item>
+        <item>@string/camera_front</item>
+        <item>Resolution</item>
+    </string-array>
+
+    <string name="label_dialog_ok">OK</string>
+    <string name="label_dialog_cancel">Cancel</string>
+    <string name="label_dialog_save">Save</string>
+    <string name="label_title_resolution">Resolution</string>
+    <string name="notification_msg_subject">myMobkit Motion Detector - %1$s</string>
+    <string name="notification_msg_content">Motion detected by device %1$s at %2$s. \r\nLogin using your Gmail account to http://www.mymobkit.com to view the captured images if you enable cloud storage.</string>
+    <string name="email_recipient">mengwangk@gmail.com</string>
+    <string name="empty_list">No messages</string>
+    <string name="loading">Loading</string>
+    <string name="chat_call_incoming">Incoming</string>
+    <string name="chat_call_missed">Missed</string>
+    <string name="chat_call_outgoing">Outgoing</string>
+    <string name="chat_call_unknown">Unknown</string>
+    <string name="chat_call_hidden">[hidden number]</string>
+    <string name="chat_me">Me</string>
+    <string name="msg_contact_delete_success">Successfully deleted the contact with id %1$s</string>
+    <string name="msg_contact_delete_failure">Unable to delete the contact with id %1$s</string>
+    <string name="msg_delete_failure">Unable to delete the message with id %1$s</string>
+    <string name="msg_delete_success">Successfully deleted the message with id %1$s</string>
+    <string name="msg_delete_no_id">No message id is provided</string>
+    <string name="msg_update_failure">Unable to update the message with id %1$s</string>
+    <string name="msg_update_success">Successfully updated the message with id %1$s</string>
+    <string name="msg_update_all">Updated all unread messages to read</string>
+    <string name="msg_delete_all">Deleted all messages</string>
+    <string name="msg_no_number">Destination cannot be blank</string>
+    <string name="msg_invalid_number">Invalid destination \"%s\"</string>
+    <string name="msg_no_matched_contact">No matched contact for \"%s\"</string>
+    <string name="msg_no_matched_parameter">No matched parameter for \"%s\"</string>
+    <string name="msg_error_commit_parameter">Unable to update parameter</string>
+    <string name="msg_error_retrieve_parameter">Unable to retrieve parameter \"%s\"</string>
+    <string name="msg_no_matched_msg">No matched message for \"%s\"</string>
+    <string name="msg_no_matched_criteria_msg">No message matching the criteria</string>
+    <string name="msg_no_contact_found">No contact found</string>
+    <string name="msg_no_vcard_found">No vCard found</string>
+    <string name="msg_no_vcalendar_found">No vCalendar found</string>
+    <string name="media_delete_success">Successfully deleted the media with id %1$s</string>
+    <string name="media_no_matched_media">Media not found for id \"%s\"</string>
+    <string name="media_not_found">No media found</string>
+    <string name="media_no_matched_contact">Contact not found for id \"%s\"</string>
+    <string name="msg_unsupported_request">Unsupported request</string>
+    <string name="msg_mms_sending_error">Unable to send MMS. Error is  \"%s\"</string>
+    <string name="msg_invalid_ussd_command">Invalid USSD command</string>
+    <string name="msg_location_not_available">Unable to retrieve location. Make sure device tracking is turned on.</string>
+    <string name="mms_no_matched_mms">MMS not found for id \"%s\"</string>
+    <string name="msg_invalid_ussd_response_pattern">Invalid USSD response pattern</string>
+    <string name="msg_invalid_contact_name">Contact name cannot be empty</string>
+    <string name="msg_error_add_contact">Unable to add contact</string>
+    <string name="network_type_1xrtt">1xRTT</string>
+    <string name="network_type_cdma">CDMA</string>
+    <string name="network_type_edge">EDGE</string>
+    <string name="network_type_ehrpd">CDMA - eHRPD</string>
+    <string name="network_type_evdo_0">CDMA - EVDO rev. 0</string>
+    <string name="network_type_evdo_A">CDMA - EVDO rev. A</string>
+    <string name="network_type_evdo_B">CDMA - EVDO rev. B</string>
+    <string name="network_type_gprs">GPRS</string>
+    <string name="network_type_hsdpa">HSDPA</string>
+    <string name="network_type_hspa">HSPA</string>
+    <string name="network_type_hspap">HSPA+</string>
+    <string name="network_type_hsupa">HSUPA</string>
+    <string name="network_type_iden">iDen</string>
+    <string name="network_type_lte">LTE</string>
+    <string name="network_type_umts">UMTS</string>
+    <string name="network_type_unknown">Unknown</string>
+    <string name="http_service_name">myMobKit</string>
+    <string name="webcam_service_name">myMobKit Webcam</string>
+    <string name="mymobkit_viewer">myMobKit Viewer</string>
+    <string name="notif_http_service">%1$s</string>
+    <string name="notif_service">myMobKit notification</string>
+    <string name="app_server_prod">http://www.mymobkit.com</string>
+    <string name="app_server_debug">http://mymobkit-rtc.appspot.com</string>
+    <string name="app_upload_request_blob_url">/upload?request=1</string>
+    <string name="app_register_request_url">/service/device/register</string>
+    <string name="app_queue_msg_request_url">/service/device/queue</string>
+    <string name="default_login_required">false</string>
+    <string name="default_lock_pattern_required">false</string>
+    <string name="default_http_user_name">admin</string>
+    <string name="default_http_user_password">password123</string>
+    <string name="default_control_panel_http_port">1688</string>
+    <string name="default_start_stop_service">false</string>
+    <string name="default_device_tracking">false</string>
+    <string name="default_auto_start_service">false</string>
+    <string name="default_disable_notification">false</string>
+    <string name="default_video_streaming_port">6888</string>
+    <string name="default_motion_detection">true</string>
+    <string name="default_motion_detection_type">2</string>
+    <string name="default_notify_by_gcm">false</string>
+    <string name="default_show_gcm_notification">true</string>
+    <string name="default_notify_by_email">false</string>
+    <string name="default_notify_by_sms">false</string>
+    <string name="default_motion_detection_threshold">80</string>
+    <string name="default_motion_detection_contour_thickness">2</string>
+    <string name="default_motion_detection_algorithm">1</string>
+    <string name="default_messaging_aging_days">7</string>
+    <string name="default_messaging_aging_size">500</string>
+    <string name="default_messaging_aging_method">Days</string>
+    <string name="default_save_sent_messages">true</string>
+    <string name="default_internet_credential"></string>
+    <string name="default_video_streaming_image_quality">50</string>
+    <string name="default_face_detection">false</string>
+    <string name="default_face_detection_size">0.2</string>
+    <string name="default_video_chunk_size_minutes">5</string>
+    <!-- <string name="default_value">0</string>-->
+    <string name="default_video_housekeeping_mb">300</string>
+    <string name="default_audio_bitrate">default</string>
+    <string name="default_video_bitrate">default</string>
+    <!-- for backward compatibility -->
+    <string name="default_video_stabilization">false</string>
+    <string name="default_audio_src">0</string>
+    <string name="default_stream_detected_object">false</string>
+    <string name="default_show_detected_motion_in_camera_view">false</string>
+    <string name="default_disguise_camera">false</string>
+    <string name="default_alarm_trigger_interval">30</string>
+    <string name="default_alarm_no_of_triggers">1</string>
+    <string name="default_stealth_mode">false</string>
+    <string name="default_alarm_phone_name">myMobKit - My Phone</string>
+    <string name="default_alarm_sound">false</string>
+    <string name="default_alarm_image_local_storage">false</string>
+    <string name="default_alarm_image_cloud_storage">false</string>
+    <string name="default_alarm_image_email_storage">true</string>
+    <string name="default_alarm_image_drive_storage">false</string>
+    <string name="default_remote_startup">false</string>
+    <string name="default_remote_startup_password">mymobkit</string>
+    <string name="default_device_unique_name">mymobkit</string>
+    <string name="default_device_email_address"></string>
+    <!--<string name="default_device_email_password"></string>-->
+    <string name="default_primary_address_family">1</string>
+    <string name="default_device_phone_number"></string>
+    <string name="default_mmsc"></string>
+    <string name="default_mms_proxy"></string>
+    <string name="default_mms_port">80</string>
+    <string name="default_motion_detection_record_video">false</string>
+    <string name="default_motion_detection_record_video_duration_seconds">10</string>
+    <string name="default_google_drive_days_to_keep">3</string>
+    <string name="default_background_camera">true</string>
+    <string name="default_widget_update_interval">3</string>
+    <string name="label_video_streaming_port_summary">Port used to serve the web page, video and audio</string>
+    <string name="label_video_streaming_port_title">Streaming port</string>
+    <string name="label_video_streaming_image_summary">JPEG image quality</string>
+    <string name="label_video_streaming_image_title">Image quality (1&#8211;100)</string>
+    <string name="label_motion_detection_summary">Check this to enable motion detection</string>
+    <string name="label_motion_detection_title">Motion detection</string>
+    <string name="label_security_settings_summary">Configure security settings</string>
+    <string name="label_security_settings_title">Security</string>
+    <string name="label_messaging_settings_summary">Configure SMS and MMS settings</string>
+    <string name="label_messaging_settings_title">Messaging</string>
+    <string name="label_video_settings_summary">Configure video recording settings</string>
+    <string name="label_video_settings_title">Video preferences</string>
+    <string name="label_alert_settings_summary">Configure alert for detected motion</string>
+    <string name="label_alert_settings_title">Alert</string>
+    <string name="label_storage_settings_summary">Configure storage settings for captured photos</string>
+    <string name="label_storage_settings_title">Storage</string>
+    <string name="label_streaming_settings_summary">Configure camera settings in surveillance mode</string>
+    <string name="label_streaming_settings_title">Streaming preferences</string>
+    <string name="label_widget_settings_summary">Configure widget settings</string>
+    <string name="label_widget_settings_title">Widget preferences</string>
+    <string name="label_widget_update_interval_summary">Configure widget update interval (in minutes)</string>
+    <string name="label_widget_update_interval_title">Widget update interval (minutes)</string>
+
+    <string name="label_motion_detection_record_video_summary">Record video when motion is detected</string>
+    <string name="label_motion_detection_record_video_title">Record video</string>
+    <string name="label_motion_detection_record_video_duration_seconds_summary">Video recording duration in seconds</string>
+    <string name="label_motion_detection_record_video_duration_seconds_title">Video duration (seconds)</string>
+    <string name="label_motion_detection_threshold_summary">Threshold for motion detection</string>
+    <string name="label_motion_detection_threshold_title">Threshold (1&#8211;255)</string>
+    <string name="label_motion_detection_settings_title">Detection preferences</string>
+    <string name="label_motion_detection_settings_summary">Configure detection settings</string>
+
+    <string name="label_lock_pattern_setup_summary">Configure lock pattern used during app start-up and surveillance camera locking</string>
+    <string name="label_lock_pattern_setup_title">Lock pattern</string>
+    <string name="label_motion_detection_contour_thickness_summary">Outline thickness for the detected motion object</string>
+    <string name="label_motion_detection_contour_thickness_title">Outline thickness</string>
+    <string name="label_motion_detection_algorithm_summary">Algorithm to detect motion</string>
+    <string name="label_motion_detection_algorithm_title">Motion detection algorithm</string>
+    <string name="label_internet_credential_summary">Configured Google email accounts in your device</string>
+    <string name="label_internet_credential_title">Internet Credential</string>
+    <string name="label_alarm_trigger_interval_summary">Minimum time between each alert</string>
+    <string name="label_alarm_trigger_interval_title">Alert interval</string>
+    <string name="label_alarm_no_of_triggers_summary">Number of detected motion before the alert is triggered</string>
+    <string name="label_alarm_no_of_triggers_title">Number of motion triggers</string>
+
+    <string name="label_google_drive_days_to_keep_summary">How many days of image files to keep in Google Drive</string>
+    <string name="label_google_drive_days_to_keep_title">Google Drive cleanup (days)</string>
+
+    <string name="label_detection_summary">Choose the detection type</string>
+    <string name="label_detection_title">Detection type</string>
+
+    <string name="label_local_storage_location_summary">Location of local image and video files</string>
+    <string name="label_local_storage_location_title">Storage location</string>
+
+    <string name="label_face_detection_summary">Check this to enable face detection</string>
+    <string name="label_face_detection_title">Face detection</string>
+    <string name="label_face_detection_size_summary">Configure face detection size</string>
+    <string name="label_face_detection_size_title">Detection size</string>
+    <string name="label_stealth_mode_title">Stealth mode</string>
+    <string name="label_stealth_mode_summary">Close application when device is touched</string>
+    <string name="label_stream_detected_object_title">Stream detected motion</string>
+    <string name="label_stream_detected_object_summary">Check this so that detected motion is streamed</string>
+    <string name="label_show_detected_motion_in_camera_view_summary">Check this to view detected motion in camera view</string>
+    <string name="label_show_detected_motion_in_camera_view_title">Show motion in camera view</string>
+    <string name="label_disguise_summary">Check this to display a web browser on top of camera</string>
+    <string name="label_disguise_title">Disguise camera</string>
+    <string name="label_notify_by_gcm_summary">Send notification through Google Cloud Messaging (GCM)</string>
+    <string name="label_notify_by_gcm_title">Notify by instant messaging</string>
+    <string name="label_show_gcm_notification_summary">Show instant notification from all connected devices</string>
+    <string name="label_show_gcm_notification_title">Show instant notification</string>
+    <string name="label_notify_by_email_summary">Send notification through email</string>
+    <string name="label_notify_by_email_title">Notify by email</string>
+    <string name="label_notify_by_sms_summary">Send notification through SMS</string>
+    <string name="label_notify_by_sms_title">Notify by SMS</string>
+    <string name="label_alarm_sound_summary">Play an alert sound when alert is triggered</string>
+    <string name="label_alarm_sound_title">Sound</string>
+    <string name="label_alarm_image_local_storage_summary">Store surveillance images in device storage</string>
+    <string name="label_alarm_image_local_storage_title">Local storage</string>
+    <string name="label_alarm_image_cloud_storage_summary">Store surveillance images on the cloud</string>
+    <string name="label_alarm_image_cloud_storage_title">Cloud storage</string>
+    <string name="label_alarm_image_email_storage_summary">Attach surveillance images in emails</string>
+    <string name="label_alarm_image_email_storage_title">Email storage</string>
+    <string name="label_alarm_image_drive_storage_summary">Upload images to Google Drive</string>
+    <string name="label_alarm_image_drive_storage_title">Google Drive storage</string>
+    <string name="label_remote_startup_summary">Allow app to be started by SMS (send "mymobkit yourpassword &lt;start/stop&gt;" to the device)</string>
+    <string name="label_remote_startup_title">Enable remote startup/shutdown</string>
+    <string name="remote_startup_keyword">mymobkit</string>
+    <string name="label_remote_startup_password_summary">Password to allow remote startup/shutdown of app</string>
+    <string name="label_remote_startup_password_title">Password protection</string>
+
+    <!--<string name="label_device_email_password_summary">Password for Gmail account (required for email notification)</string>
+    <string name="label_device_email_password_title">Gmail password</string>-->
+
+    <string name="label_control_panel_security">Web Control Panel Security</string>
+    <string name="label_others">Others</string>
+    <string name="label_messaging_settings">SMS API Settings</string>
+    <string name="label_remote_control">Remote Control</string>
+    <string name="label_application_security">Application Security</string>
+    <string name="label_control_panel_service">Service</string>
+    <string name="label_video_streaming_audio">Audio</string>
+    <string name="label_control_panel_login_required_summary">When this is checked, user is required to login to control panel</string>
+    <string name="label_control_panel_login_required_title">Login required</string>
+    <string name="label_lock_pattern_required_summary">When this is checked, user is required to enter lock pattern during app start-up</string>
+    <string name="label_lock_pattern_required_title">Enable lock during app start-up</string>
+    <string name="label_control_panel_user_name_summary">Login user name</string>
+    <string name="label_control_panel_user_name_title">Login user name</string>
+    <string name="label_control_panel_user_password_summary">Login user password</string>
+    <string name="label_control_panel_user_password_title">Login user password</string>
+    <string name="label_control_panel_port_summary">Control Panel HTTP listening port</string>
+    <string name="label_control_panel_port_title">Control Panel listening port</string>
+    <string name="label_control_panel_status_summary">Check this to start control panel</string>
+    <string name="label_control_panel_status_title">Start/stop control panel</string>
+    <string name="label_control_panel_url_summary">URL of control panel</string>
+    <string name="label_control_panel_url_title">URL</string>
+    <string name="label_control_panel_auto_start_summary">Check this to auto start control panel service upon reboot</string>
+    <string name="label_control_panel_auto_start_title">Auto start service</string>
+    <string name="label_control_panel_disable_notification_summary">Check this to disable ongoing notification</string>
+    <string name="label_control_panel_disable_notification_title">Disable notification</string>
+    <string name="label_device_unique_name_summary">Set a unique name for this device</string>
+    <string name="label_device_unique_name_title">Device unique name</string>
+    <string name="label_device_email_address_summary">Send notification to this Gmail address</string>
+    <string name="label_device_email_address_title">Gmail</string>
+    <string name="label_device_phone_number_summary">Send notification to this phone number</string>
+    <string name="label_device_phone_number_title">Phone number</string>
+    <string name="label_device_tracking_summary">Check this to enable device tracking (authorized access required for Google services)</string>
+    <string name="label_device_tracking_title">Device tracking</string>
+
+    <string name="label_apn_mmsc_summary">MMSC URL</string>
+    <string name="label_apn_mmsc_title">MMSC URL</string>
+    <string name="label_apn_mms_proxy_summary">MMSC proxy host</string>
+    <string name="label_apn_mms_proxy_title">MMSC proxy host</string>
+    <string name="label_apn_mms_port_summary">MMSC proxy port</string>
+    <string name="label_apn_mms_port_title">MMSC proxy port</string>
+    <string name="label_apn_mms_user_summary">MMSC user name</string>
+    <string name="label_apn_mms_user_title">MMSC user name</string>
+    <string name="label_apn_mms_password_summary">MMSC password</string>
+    <string name="label_apn_mms_password_title">MMSC password</string>
+    <string name="label_apn_mms_user_agent_summary">MMS user agent</string>
+    <string name="label_apn_mms_user_agent_title">MMS user agent</string>
+
+    <string name="label_video_format_title">Video format</string>
+    <string name="label_video_format_summary">Set the video recording format</string>
+    <string name="label_video_resolution_title">Video resolution</string>
+    <string name="label_video_resolution_summary">Set the video recording resolution</string>
+    <string name="label_camera_resolution_title">Camera resolution</string>
+    <string name="label_camera_resolution_summary">Set the camera resolution</string>
+    <string name="label_video_encoder_title">Video encoder</string>
+    <string name="label_video_encoder_summary">Set the video encoder</string>
+    <string name="label_audio_encoder_title">Audio encoder</string>
+    <string name="label_audio_encoder_summary">Set the audio encoder</string>
+    <string name="label_video_chunk_size_title">Video file duration (minutes)</string>
+    <string name="label_video_chunk_size_summary">Set the duration (in minutes) for continuous recorded video sessions</string>
+    <string name="label_video_housekeeping_title">Storage cleanup (mb)</string>
+    <string name="label_video_housekeeping_summary">Set the minimum storage in megabyte (mb). When storage is below this threshold, older video files are removed</string>
+    <string name="label_audio_bitrate_title">Audio bitrate</string>
+    <string name="label_audio_bitrate_summary">Set the audio bitrate</string>
+    <string name="label_video_bitrate_title">Video bitrate</string>
+    <string name="label_video_bitrate_summary">Set the approximate bitrate of videos (higher means better quality, but takes up more disk space)</string>
+    <string name="label_video_stabilization_title">Video stabilization</string>
+    <string name="label_video_stabilization_summary">Enable video stabilization reduces the shaking due to the motion of the camera in both the preview and in recorded videos</string>
+    <string name="label_video_frame_rate_title">Video frame rate</string>
+    <string name="label_video_frame_rate_summary">Set the video frames per second (fps).</string>
+    <string name="label_video_frame_rate_summary_description">&#160;Maximum is %1$s</string>
+
+    <string name="label_background_camera_title">Camera in background</string>
+    <string name="label_background_camera_summary">Start the surveillance camera as background service</string>
+
+    <string name="label_audio_src_title">Audio source</string>
+    <string name="label_audio_src_summary">Microphone to use for recording audio</string>
+    <string name="msg_device_email_must_exist">Make sure a valid Gmail account is configured</string>
+    <string name="msg_device_phone_number_must_exist">Make sure a valid device phone number is configured</string>
+    <string name="msg_valid_gmail_account">Make sure a valid Gmail account is configured</string>
+    <string name="msg_background_camera">Surveillance camera will be running as background service</string>
+    <string name="msg_camera_orientation">Make sure camera orientation is horizontal for better accuracy</string>
+    <string name="upload_image_name_pattern">%1$s at %2$s</string>
+    <string name="msg_signed_in_google_play_services">Successfully signed in to Google Play Services</string>
+    <string name="label_primary_address_family_summary">Primary address family</string>
+    <string name="label_primary_address_family_title">Primary address family</string>
+    <string name="label_messaging_aging_summary">Choose the method to housekeep the internal message store</string>
+    <string name="label_messaging_aging_title">Housekeeping</string>
+    <string name="label_messaging_aging_days_summary">Define the aging days for old messages</string>
+    <string name="label_messaging_aging_days_title">Aging days</string>
+    <string name="label_messaging_aging_size_summary">Define the number of messages to keep</string>
+    <string name="label_messaging_aging_size_title">Number of messages</string>
+    <string name="label_save_sent_messages_summary">Save sent messages in sent box</string>
+    <string name="label_save_sent_messages_title">Save sent messages</string>
+    <string name="label_howto_surveillance">Surveillance How-To</string>
+    <string name="label_howto_api">Remote Access APIs</string>
+    <string name="label_do_not_show_again">Don\'t show this again</string>
+    <string name="label_title_default_app">Important Notice</string>
+    <string name="msg_already_default_sms_app">myMobKit is already the default SMS app</string>
+    <string name="msg_changed_default_app">myMobKit is now configured as the default SMS app</string>
+    <string name="msg_changed_default_app_failure">Failed to configure myMobKit as the default SMS app</string>
+    <string name="label_apn_settings">Access Point Name (APN)</string>
+    <string name="label_widget_settings">Widget</string>
+    <string name="msg_unsupported_change_default_app">This feature is not supported in current Android version</string>
+    <string name="msg_configure_default_sms_app"><![CDATA[
+        For messaging APIs to receive SMS/MMS, you need to configure this app as the <b>default SMS app</b> through the option menu.
+      ]]>
+    </string>
+    <string name="msg_gcm_registration_failure">Unable to register device to server</string>
+    <string name="msg_google_drive_connected">Use the configured Gmail account to access Google Drive</string>
+    <string name="msg_google_drive_folder_save_error">Unable to save to Google Drive</string>
+    <string name="msg_google_drive_folder_create_error">Unable to create Google Drive folder</string>
+    <string name="msg_gcm_motion_detected">%1$s - Motion is detected</string>
+    <string name="msg_gcm_device_info">%1$s - Device information</string>
+    <string name="msg_gcm_wake_up">%1$s - Wake up device</string>
+    <string name="msg_no_gcm_message">Notifications not available</string>
+    <string name="msg_unable_to_create_widget">Unable to create home widget</string>
+    <string name="msg_gcm_deleted_notif_failure">Unable to delete notifications</string>
+    <string name="toast_crash">myMobKit crashed. A report has been sent to the developer to help fix the issue.</string>
+    <string name="msg_unable_to_retrieve_drive_files">Unable to retrieve Google Drive files under %1$s folder</string>
+    <string name="msg_gcm_service_control">Service command received for %1$s</string>
+    <string name="msg_gcm_surveillance_control">Surveillance command received for %1$s</string>
+    <string name="msg_gcm_camera_control">Camera command received for %1$s</string>
+    <string name="msg_gcm_device_not_registered">Device is not registered</string>
+    <string name="msg_gcm_invalid_request">Invalid request</string>
+    <string name="label_button_stop">Stop</string>
+    <string name="label_button_back">Hide</string>
+    <string name="label_button_night_vision_on">&#x2713; Night</string>
+    <string name="label_button_night_vision_off">&#x2717; Night</string>
+    <string name="msg_restore_night_vision">Press Back button to go back to normal view</string>
+    <string name="label_button_flash_on">&#x2713; Flash</string>
+    <string name="label_button_flash_off">&#x2717; Flash</string>
+    <string name="msg_camera_in_background">Camera will be running in background</string>
+    <string name="msg_title_wait">Please wait</string>
+    <string name="msg_retrieving_devices">Retrieving devices...</string>
+    <string name="msg_retrieving_photos">Retrieving photos...</string>
+    <string name="msg_checking_device_status">Checking phone status...</string>
+    <string name="msg_device_is_active">Connecting to phone now...</string>
+    <string name="msg_live_view_not_available">Live view is not available. Make sure control panel service is started.</string>
+    <string name="msg_check_device_status_failure">Unable to retrieve phone status.</string>
+    <string name="msg_device_failure">Unable to connect to phone.</string>
+    <string name="msg_error_retrieving_devices">Unable to retrieve devices. Please try again.</string>
+    <string name="msg_device_tracking_not_enabled">Device tracking must be enabled in order to view device information.</string>
+    <string name="msg_error_retrieving_image">Unable to retrieve image from Google Drive.</string>
+    <string name="title_version">Version: %1$s</string>
+    <string name="label_view_photo">Photos</string>
+    <string name="label_live_view">Live View</string>
+    <string name="msg_no_photo_found">No photo found</string>
+    <string name="label_photo_count">Photos: %1$s</string>
+    <string name="msg_camera_unavailable">It seems that your device does not support camera (or it is locked)</string>
+    <string name="label_device_name">Choose device to display</string>
+
+    <string name="label_button_allow">Allow</string>
+    <string name="label_button_deny">Deny</string>
+
+    <string name="msg_contact_permission_rationale">Contact permission must be granted in order for the app to function properly.</string>
+    <string name="msg_contact_permission_denied">Contact permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_contact_permission_never_ask_again">Contact permission was denied. Please grant it in order for the app to work properly!</string>
+
+    <string name="msg_camera_permission_rationale">Camera permission must be granted in order for surveillance feature to function properly.</string>
+    <string name="msg_camera_permission_denied">Camera permission was denied. Please consider granting it in order for the surveillance feature to work properly!</string>
+    <string name="msg_camera_permission_never_ask_again">Camera permission was denied. Please grant it in order for the surveillance feature to work properly!</string>
+
+    <string name="msg_system_alert_window_permission_rationale">Draw over other apps permission must be granted in order for surveillance feature to function properly.</string>
+    <string name="msg_system_alert_window_permission_denied">Draw over other apps permission was denied. Please consider granting it in order for surveillance feature to work properly!</string>
+    <string name="msg_system_alert_window_permission_never_ask_again">Draw over other apps permission was denied. Please grant it in order for surveillance feature to work properly!</string>
+
+    <string name="msg_location_permission_rationale">Location permission must be granted in order for the app to function properly.</string>
+    <string name="msg_location_permission_denied">Location permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_location_permission_never_ask_again">Location permission was denied. Please grant it in order for the app to work properly!</string>
+
+    <string name="msg_audio_permission_rationale">Audio permission must be granted in order for the app to function properly.</string>
+    <string name="msg_audio_permission_denied">Audio permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_audio_permission_never_ask_again">Audio permission was denied. Please grant it in order for the app to work properly!</string>
+
+    <string name="msg_call_permission_rationale">Call permission must be granted in order for the app to function properly.</string>
+    <string name="msg_call_permission_denied">Call permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_call_permission_never_ask_again">Call permission was denied. Please grant it in order for the app to work properly!</string>
+
+    <string name="msg_sms_permission_rationale">SMS permission must be granted in order for the app to function properly.</string>
+    <string name="msg_sms_permission_denied">SMS permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_sms_permission_never_ask_again">SMS permission was denied. Please grant it in order for the app to work properly!</string>
+
+    <string name="msg_write_external_storage_permission_rationale">Storage access permission must be granted in order for the app to function properly.</string>
+    <string name="msg_write_external_storage_permission_denied">Storage access permission was denied. Please consider granting it in order for the app to work properly!</string>
+    <string name="msg_write_external_storage_permission_never_ask_again">Storage access permission was denied. Please grant it in order for the app to work properly!</string>
+
+
+    <!--
+    <string name="msg_title_connection_failure">myMobKit alert</string>
+    <string name="msg_content_connection_failure">Tap to renew the access token</string>
+    -->
+    <string name="msg_notification_gcm">myMobKit notification</string>
+    <string name="msg_notification_alert">myMobKit alert</string>
+    <string name="msg_notification_stop_ringing">Tap to stop ringing</string>
+
+    <!--
+    <string name="msg_gtalk_error">Error: %s</string>
+    <string name="msg_gtalk_api_invalid_command">Invalid command</string>
+    <string name="msg_gtalk_api_failed">Unable to send command through Google Talk</string>
+    <string name="msg_gtalk_ring_command_description">Ring command received for %1$s</string>
+    <string name="msg_gtalk_status_command_description">Status command received for %1$s</string>
+    <string name="msg_gtalk_session_command_description">Session command received for %1$s</string>
+    <string name="msg_gtalk_surveillance_command_description">Surveillance command received for %1$s</string>
+    <string name="msg_gtalk_switch_camera_command_description">Camera command received for %1$s</string>
+    <string name="msg_gtalk_spy_camera_command_description">Spy camera command received for %1$s</string>
+    <string name="msg_gtalk_invalid_session_id">Invalid session id</string>
+    <string name="msg_gtalk_session_no_response">No response for this session</string>
+    -->
+
+    <string name="msg_overlay_permission_not_granted">myMobKit must be granted the draw overlay permission in order to function correctly</string>
+    <string name="ussd_accessibility_service_description">USSD accessibility service</string>
+    <string name="msg_ussd_invalid_session_id">Invalid session id</string>
+    <string name="msg_ussd_session_no_response">No response for this session</string>
+    <string name="msg_android_m_system_alert_dialog_permission">
+    <![CDATA[
+        1. When control panel is started, please <b>grant all the required permissions</b> in order for myMobKit to function properly.
+
+           <br><br>
+
+        2. For messaging APIs to receive SMS/MMS, you need to configure this app as the <b>default SMS app</b> through the option menu.
+       </ol>
+    ]]>
+    </string>
+
+    <string-array name="pref_detection_titles">
+        <item>Face</item>
+        <item>Human</item>
+        <item>Motion</item>
+    </string-array>
+    <string-array name="pref_detection_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="pref_face_detection_size_titles">
+        <item>20 Percent</item>
+        <item>30 Percent</item>
+        <item>40 Percent</item>
+        <item>50 Percent</item>
+    </string-array>
+    <string-array name="pref_face_detection_size_values">
+        <item>0.2</item>
+        <item>0.3</item>
+        <item>0.4</item>
+        <item>0.5</item>
+    </string-array>
+    <string-array name="pref_motion_detection_algorithm_titles">
+        <item>Simple</item>
+        <item>Background Subtraction</item>
+        <!-- <item>Motion History Image</item>-->
+    </string-array>
+    <string-array name="pref_motion_detection_algorithm_values">
+        <item>1</item>
+        <item>2</item>
+        <!-- <item>3</item>-->
+    </string-array>
+    <string-array name="pref_alarm_trigger_interval_titles">
+        <item>10 seconds</item>
+        <item>20 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>3 minutes</item>
+        <item>4 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+    </string-array>
+    <string-array name="pref_alarm_trigger_interval_values">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+        <item>300</item>
+        <item>600</item>
+        <item>900</item>
+        <item>1200</item>
+        <item>1500</item>
+        <item>1800</item>
+        <item>3600</item>
+    </string-array>
+    <string-array name="pref_primary_address_family_titles">
+        <item>IPv4</item>
+        <item>IPv6</item>
+    </string-array>
+    <string-array name="pref_primary_address_family_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_messaging_aging_titles">
+        <item>Aging Days</item>
+        <item>Message Size</item>
+    </string-array>
+    <string-array name="pref_messaging_aging_values">
+        <item>Days</item>
+        <item>Size</item>
+    </string-array>
+
+    <!-- Shown in the 'About' window of the app. -->
+    <string name="about_body">
+<![CDATA[
+        <b>myMobKit</b><br>
+        Version %s<br><br>
+        Website: <a href="http://www.mymobkit.com">http://www.mymobkit.com</a><br>
+        Development Status: <a href="https://trello.com/b/JYNwgA6J/mymobkit">https://trello.com/b/JYNwgA6J/mymobkit</a><br>
+    ]]>
+    </string>
+
+
+     <string name="upgrade_body">
+<![CDATA[
+        <b>Action required</b><br><br>
+         This version requires authorization to Google Talk for additional tracking features.
+    ]]>
+    </string>
+
+
+    <string-array name="pref_video_format_titles">
+        <item>Default</item>
+        <item>3GPP</item>
+        <item>MP4</item>
+        <!--   <item>RTP AVP</item>
+           <item>MPEG2 TS</item>-->
+        <item>WebM</item>
+    </string-array>
+    <string-array name="pref_video_format_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <!-- <item>7</item>
+         <item>8</item>-->
+        <item>9</item>
+    </string-array>
+    <string-array name="pref_video_encoder_titles">
+        <item>Default</item>
+        <item>H.263</item>
+        <item>H.264</item>
+        <item>MPEG-4 SP</item>
+        <item>VP8</item>
+    </string-array>
+    <string-array name="pref_video_encoder_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pref_audio_encoder_titles">
+        <item>Default</item>
+        <item>AMR (Narrowband)</item>
+        <item>AMR (Wideband)</item>
+        <item>AAC Low Complexity (AAC-LC)</item>
+        <item>High Efficiency AAC (HE-AAC)</item>
+        <item>Enhanced Low Delay AAC (AAC-ELD)</item>
+        <item>Ogg Vorbis</item>
+    </string-array>
+    <string-array name="pref_audio_encoder_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="pref_audio_bitrate_titles">
+        <item>Default</item>
+        <item>96 kbit/s</item>
+        <item>88.2 kbit/s</item>
+        <item>64 kbit/s</item>
+        <item>48 kbit/s</item>
+        <item>44.1 kbit/s</item>
+        <item>32 kbit/s</item>
+        <item>24 kbit/s</item>
+        <item>22.05 kbit/s</item>
+        <item>16 kbit/s</item>
+        <item>12 kbit/s</item>
+        <item>11.02 kbit/s</item>
+        <item>8 kbit/s</item>
+        <item>7.35 kbit/s</item>
+    </string-array>
+    <string-array name="pref_audio_bitrate_values">
+        <item>default</item>
+        <item>96000</item>
+        <item>88200</item>
+        <item>64000</item>
+        <item>48000</item>
+        <item>44100</item>
+        <item>32000</item>
+        <item>24000</item>
+        <item>22050</item>
+        <item>16000</item>
+        <item>12000</item>
+        <item>11020</item>
+        <item>8000</item>
+        <item>7350</item>
+    </string-array>
+    <string-array name="pref_video_bitrate_titles">
+        <item>Default</item>
+        <item>100 kbit</item>
+        <item>200 kbit</item>
+        <item>500 kbit</item>
+        <item>1 mbit</item>
+        <item>2 mbit</item>
+        <item>3 mbit</item>
+        <item>4 mbit</item>
+        <item>5 mbit</item>
+        <item>6 mbit</item>
+        <item>7 mbit</item>
+        <item>8 mbit</item>
+        <item>9 mbit</item>
+        <item>10 mbit</item>
+        <item>15 mbit</item>
+        <item>20 mbit</item>
+        <item>30 mbit</item>
+        <item>40 mbit</item>
+        <item>50 mbit</item>
+        <item>60 mbit</item>
+        <item>70 mbit</item>
+        <item>80 mbit</item>
+        <item>90 mbit</item>
+        <item>100 mbit</item>
+    </string-array>
+    <string-array name="pref_video_bitrate_values">
+        <item>default</item>
+        <item>100000</item>
+        <item>200000</item>
+        <item>500000</item>
+        <item>1000000</item>
+        <item>2000000</item>
+        <item>3000000</item>
+        <item>4000000</item>
+        <item>5000000</item>
+        <item>6000000</item>
+        <item>7000000</item>
+        <item>8000000</item>
+        <item>9000000</item>
+        <item>10000000</item>
+        <item>15000000</item>
+        <item>20000000</item>
+        <item>30000000</item>
+        <item>40000000</item>
+        <item>50000000</item>
+        <item>60000000</item>
+        <item>70000000</item>
+        <item>80000000</item>
+        <item>90000000</item>
+        <item>100000000</item>
+    </string-array>
+    <string-array name="pref_audio_source_titles">
+        <item>Default</item>
+        <item>Camcorder</item>
+        <item>Microphone</item>
+    </string-array>
+    <string-array name="pref_audio_source_values">
+        <item>0</item>
+        <item>5</item>
+        <item>1</item>
+    </string-array>
+
+
+    <!-- retrieve from https://console.developers.google.com/home/dashboard?project=phone-kit -->
+    <!-- <string name="google_app_id">1068561572745</string>-->
+</resources>

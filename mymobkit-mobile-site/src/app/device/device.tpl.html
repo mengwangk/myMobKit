@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+    <div class="row">
+    
+	   <div ng-if="loadingInProgress"> 
+             <br/>
+             &nbsp;&nbsp;&nbsp; <img src="assets/images/record.gif">&nbsp;&nbsp;&nbsp; <span class="label label-default">
+             Loading...please wait
+             </span>  
+        </div>
+                 
+        <ul class="thumbnails">        
+            <div class="col-md-4" ng-repeat="device in devices">
+                <div class="thumbnail">                	
+                	<div class="caption text-center">
+                         <h3>{{device.deviceName}}</h3>
+                         <span class="label label-info">{{device.deviceId}}</span> <span class="label label-info">{{device.email}}</span>
+                         <br/><br/>
+                         <div ng-switch on="device.isServiceStarted">
+					            <span ng-switch-when="true">
+					            	<a class="btn  btn-sm btn-success" role="button" href='{{device.uri}}'>{{device.uri}}</a>
+					            </span>
+					            <span class="label label-warning" ng-switch-default>Service not available</span>
+					      </div>
+                    </div>
+					
+					<div class="caption text-center">
+                        <p class="text-center">
+                        <a href="#controlpanel?name={{device.deviceName}}&id={{device.deviceId}}" class="btn btn-primary">Control Panel</a>
+                        </p>
+                   </div>   
+                   
+				  <div>
+				    <uib-carousel interval="slideInterval" no-wrap="noWrapSlides" active="slideActive">
+				      <uib-slide ng-repeat="slide in device.slides" index="slide.id">
+				        <img ng-src="{{slide.image}}" style="margin:auto;" class="img-responsive">
+				        <div class="carousel-caption">
+				          <p>{{slide.text}}</p>
+				        </div>
+				      </uib-slide>
+				    </uib-carousel>
+				  </div>                
+                                     
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

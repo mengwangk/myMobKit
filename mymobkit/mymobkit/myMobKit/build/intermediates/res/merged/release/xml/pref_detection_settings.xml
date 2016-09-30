@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:ppu="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/label_motion_detection">
+
+        <CheckBoxPreference
+            android:defaultValue="@string/default_motion_detection"
+            android:key="preferences_motion_detection"
+            android:summary="@string/label_motion_detection_summary"
+            android:title="@string/label_motion_detection_title" />
+
+        <ListPreference
+            android:defaultValue="@string/default_motion_detection_type"
+            android:dependency="preferences_motion_detection"
+            android:entries="@array/pref_detection_titles"
+            android:entryValues="@array/pref_detection_values"
+            android:key="preferences_motion_detection_type"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:summary="@string/label_detection_summary"
+            android:title="@string/label_detection_title" />
+
+
+        <PreferenceScreen
+            android:dependency="preferences_motion_detection"
+            android:icon="@mipmap/ic_detection"
+            android:key="preferences_motion_detection_settings"
+            android:persistent="true"
+            android:summary="@string/label_motion_detection_settings_summary"
+            android:title="@string/label_motion_detection_settings_title">
+
+
+            <PreferenceCategory android:title="@string/label_general_settings">
+                <com.mymobkit.preference.SeekBarDialogPreference
+                    android:defaultValue="@string/default_motion_detection_contour_thickness"
+                    android:dialogMessage="@string/label_motion_detection_contour_thickness_summary"
+                    android:key="preferences_motion_detection_contour_thickness"
+                    android:max="10"
+                    android:summary="@string/label_motion_detection_contour_thickness_summary"
+                    android:title="@string/label_motion_detection_contour_thickness_title"
+                    custom:min="-1"
+                    custom:progressTextSuffix="" />
+            </PreferenceCategory>
+
+            <PreferenceCategory android:title="@string/label_face_detection">
+                <!--    <CheckBoxPreference
+                        android:defaultValue="@string/default_face_detection"
+                        android:key="preferences_face_detection"
+                        android:summary="@string/label_face_detection_summary"
+                        android:title="@string/label_face_detection_title" />
+                 -->
+                <ListPreference
+                    android:defaultValue="@string/default_face_detection_size"
+                    android:entries="@array/pref_face_detection_size_titles"
+                    android:entryValues="@array/pref_face_detection_size_values"
+                    android:key="preferences_face_detection_size"
+                    android:negativeButtonText="@null"
+                    android:positiveButtonText="@null"
+                    android:summary="@string/label_face_detection_size_summary"
+                    android:title="@string/label_face_detection_size_title" />
+            </PreferenceCategory>
+
+
+            <PreferenceCategory android:title="@string/label_motion_detection">
+
+                <ListPreference
+                    android:defaultValue="@string/default_motion_detection_algorithm"
+                    android:entries="@array/pref_motion_detection_algorithm_titles"
+                    android:entryValues="@array/pref_motion_detection_algorithm_values"
+                    android:key="preferences_motion_detection_algorithm"
+                    android:negativeButtonText="@null"
+                    android:positiveButtonText="@null"
+                    android:summary="@string/label_motion_detection_algorithm_summary"
+                    android:title="@string/label_motion_detection_algorithm_title" />
+
+
+                <com.mymobkit.preference.SeekBarDialogPreference
+                    android:defaultValue="@string/default_motion_detection_threshold"
+                    android:dialogMessage="@string/label_motion_detection_threshold_summary"
+                    android:key="preferences_motion_detection_threshold"
+                    android:max="255"
+                    android:summary="@string/label_motion_detection_threshold_summary"
+                    android:title="@string/label_motion_detection_threshold_title"
+                    custom:min="1"
+                    custom:progressTextSuffix="" />
+
+
+            </PreferenceCategory>
+
+        </PreferenceScreen>
+
+        <CheckBoxPreference
+            android:defaultValue="@string/default_motion_detection_record_video"
+            android:dependency="preferences_motion_detection"
+            android:key="preferences_motion_detection_record_video"
+            android:summary="@string/label_motion_detection_record_video_summary"
+            android:title="@string/label_motion_detection_record_video_title" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_motion_detection_record_video_duration_seconds"
+            android:dependency="preferences_motion_detection_record_video"
+            android:dialogMessage="@string/label_motion_detection_record_video_duration_seconds_summary"
+            android:dialogTitle="@string/label_motion_detection_record_video_duration_seconds_title"
+            android:inputType="number"
+            android:key="preferences_motion_detection_record_video_duration_seconds"
+            android:summary="@string/label_motion_detection_record_video_duration_seconds_summary"
+            android:title="@string/label_motion_detection_record_video_duration_seconds_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/label_alarm">
+
+        <CheckBoxPreference
+            android:defaultValue="@string/default_show_gcm_notification"
+            android:key="preferences_show_gcm_notification"
+            android:summary="@string/label_show_gcm_notification_summary"
+            android:title="@string/label_show_gcm_notification_title" />
+
+        <PreferenceScreen
+            android:icon="@mipmap/ic_alert"
+            android:key="preferences_alert_settings"
+            android:persistent="true"
+            android:summary="@string/label_alert_settings_summary"
+            android:title="@string/label_alert_settings_title">
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_notify_by_gcm"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_notify_by_gcm"
+                android:summary="@string/label_notify_by_gcm_summary"
+                android:title="@string/label_notify_by_gcm_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_notify_by_email"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_notify_by_email"
+                android:summary="@string/label_notify_by_email_summary"
+                android:title="@string/label_notify_by_email_title" />
+            <CheckBoxPreference
+                android:defaultValue="@string/default_notify_by_sms"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_notify_by_sms"
+                android:summary="@string/label_notify_by_sms_summary"
+                android:title="@string/label_notify_by_sms_title" />
+
+            <ListPreference
+                android:defaultValue="@string/default_alarm_trigger_interval"
+                android:dependency="preferences_motion_detection"
+                android:entries="@array/pref_alarm_trigger_interval_titles"
+                android:entryValues="@array/pref_alarm_trigger_interval_values"
+                android:key="preferences_alarm_trigger_interval"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_alarm_trigger_interval_summary"
+                android:title="@string/label_alarm_trigger_interval_title" />
+
+            <com.mymobkit.preference.SeekBarDialogPreference
+                android:defaultValue="@string/default_alarm_no_of_triggers"
+                android:dependency="preferences_motion_detection"
+                android:dialogMessage="@string/label_alarm_no_of_triggers_summary"
+                android:key="preferences_alarm_number_of_triggers"
+                android:max="100"
+                android:summary="@string/label_alarm_no_of_triggers_summary"
+                android:title="@string/label_alarm_no_of_triggers_title"
+                custom:min="1"
+                custom:progressTextSuffix=" time(s)" />
+
+            <RingtonePreference
+                android:defaultValue=""
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_alarm_sound_type"
+                android:ringtoneType="notification"
+                android:showDefault="true"
+                android:showSilent="true"
+                android:summary="@string/label_alarm_sound_summary"
+                android:title="@string/label_alarm_sound_title"></RingtonePreference>
+
+        </PreferenceScreen>
+
+
+        <PreferenceScreen
+            android:icon="@mipmap/ic_storage"
+            android:key="preferences_storage_settings"
+            android:persistent="true"
+            android:summary="@string/label_storage_settings_summary"
+            android:title="@string/label_storage_settings_title">
+
+            <ListPreference
+                android:key="preferences_storage_location"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_local_storage_location_summary"
+                android:title="@string/label_local_storage_location_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_alarm_image_local_storage"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_alarm_image_local_storage"
+                android:summary="@string/label_alarm_image_local_storage_summary"
+                android:title="@string/label_alarm_image_local_storage_title" />
+            <CheckBoxPreference
+                android:defaultValue="@string/default_alarm_image_cloud_storage"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_alarm_image_cloud_storage"
+                android:summary="@string/label_alarm_image_cloud_storage_summary"
+                android:title="@string/label_alarm_image_cloud_storage_title" />
+            <CheckBoxPreference
+                android:defaultValue="@string/default_alarm_image_email_storage"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_alarm_image_email_storage"
+                android:summary="@string/label_alarm_image_email_storage_summary"
+                android:title="@string/label_alarm_image_email_storage_title" />
+            <CheckBoxPreference
+                android:defaultValue="@string/default_alarm_image_drive_storage"
+                android:dependency="preferences_motion_detection"
+                android:key="preferences_alarm_image_drive_storage"
+                android:summary="@string/label_alarm_image_drive_storage_summary"
+                android:title="@string/label_alarm_image_drive_storage_title" />
+
+            <com.mymobkit.preference.SeekBarDialogPreference
+                android:defaultValue="@string/default_google_drive_days_to_keep"
+                android:dependency="preferences_alarm_image_drive_storage"
+                android:dialogMessage="@string/label_google_drive_days_to_keep_summary"
+                android:key="preferences_google_drive_days_to_keep"
+                android:max="100"
+                android:summary="@string/label_google_drive_days_to_keep_summary"
+                android:title="@string/label_google_drive_days_to_keep_title"
+                custom:min="1"
+                custom:progressTextSuffix=" day(s)" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/label_video_preference">
+
+        <CheckBoxPreference
+            android:defaultValue="@string/default_background_camera"
+            android:key="preferences_background_camera"
+            android:summary="@string/label_background_camera_summary"
+            android:title="@string/label_background_camera_title" />
+
+
+        <ListPreference
+            android:key="preferences_camera_resolution"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:summary="@string/label_camera_resolution_summary"
+            android:title="@string/label_camera_resolution_title" />
+
+
+        <PreferenceScreen
+            android:icon="@mipmap/ic_video"
+            android:key="preferences_video_settings"
+            android:persistent="true"
+            android:summary="@string/label_video_settings_summary"
+            android:title="@string/label_video_settings_title">
+
+            <ListPreference
+                android:key="preferences_video_resolution"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_video_resolution_summary"
+                android:title="@string/label_video_resolution_title" />
+
+            <ListPreference
+                android:entries="@array/pref_video_format_titles"
+                android:entryValues="@array/pref_video_format_values"
+                android:key="preferences_video_format"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_video_format_summary"
+                android:title="@string/label_video_format_title" />
+
+            <ListPreference
+                android:entries="@array/pref_video_encoder_titles"
+                android:entryValues="@array/pref_video_encoder_values"
+                android:key="preferences_video_encoder"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_video_encoder_summary"
+                android:title="@string/label_video_encoder_title" />
+
+            <EditTextPreference
+                android:defaultValue="@string/default_video_chunk_size_minutes"
+                android:dialogMessage="@string/label_video_chunk_size_summary"
+                android:dialogTitle="@string/label_video_chunk_size_title"
+                android:inputType="number"
+                android:key="preferences_video_chunk_size_minutes"
+                android:summary="@string/label_video_chunk_size_summary"
+                android:title="@string/label_video_chunk_size_title" />
+            <EditTextPreference
+                android:defaultValue="@string/default_video_housekeeping_mb"
+                android:dialogMessage="@string/label_video_housekeeping_summary"
+                android:dialogTitle="@string/label_video_housekeeping_title"
+                android:inputType="number"
+                android:key="preferences_video_housekeeping_mb"
+                android:summary="@string/label_video_housekeeping_summary"
+                android:title="@string/label_video_housekeeping_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_video_stabilization"
+                android:key="preferences_video_stabilization"
+                android:summary="@string/label_video_stabilization_summary"
+                android:title="@string/label_video_stabilization_title" />
+
+            <!--   <ListPreference
+                   android:defaultValue="@string/default_video_bitrate"
+                   android:entries="@array/pref_video_bitrate_titles"
+                   android:entryValues="@array/pref_video_bitrate_values"
+                   android:key="preferences_video_bitrate"
+                   android:negativeButtonText="@null"
+                   android:positiveButtonText="@null"
+                   android:summary="@string/label_video_bitrate_summary"
+                   android:title="@string/label_video_bitrate_title" />-->
+
+            <EditTextPreference
+                android:dialogMessage="@string/label_video_bitrate_summary"
+                android:dialogTitle="@string/label_video_bitrate_title"
+                android:inputType="number"
+                android:key="preferences_video_bitrate"
+                android:summary="@string/label_video_bitrate_summary"
+                android:title="@string/label_video_bitrate_title" />
+
+
+            <EditTextPreference
+                android:dialogMessage="@string/label_video_frame_rate_summary"
+                android:dialogTitle="@string/label_video_frame_rate_title"
+                android:inputType="number"
+                android:key="preferences_video_frame_rate"
+                android:summary="@string/label_video_frame_rate_summary"
+                android:title="@string/label_video_frame_rate_title" />
+
+            <ListPreference
+                android:entries="@array/pref_audio_encoder_titles"
+                android:entryValues="@array/pref_audio_encoder_values"
+                android:key="preferences_audio_encoder"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_audio_encoder_summary"
+                android:title="@string/label_audio_encoder_title" />
+
+            <!--   <ListPreference
+                   android:defaultValue="@string/default_audio_bitrate"
+                   android:entries="@array/pref_audio_bitrate_titles"
+                   android:entryValues="@array/pref_audio_bitrate_values"
+                   android:key="preferences_audio_bitrate"
+                   android:negativeButtonText="@null"
+                   android:positiveButtonText="@null"
+                   android:summary="@string/label_audio_bitrate_summary"
+                   android:title="@string/label_audio_bitrate_title" />-->
+
+            <EditTextPreference
+                android:dialogMessage="@string/label_audio_bitrate_summary"
+                android:dialogTitle="@string/label_audio_bitrate_title"
+                android:inputType="number"
+                android:key="preferences_audio_bitrate"
+                android:summary="@string/label_audio_bitrate_summary"
+                android:title="@string/label_audio_bitrate_title" />
+
+
+            <ListPreference
+                android:defaultValue="@string/default_audio_src"
+                android:entries="@array/pref_audio_source_titles"
+                android:entryValues="@array/pref_audio_source_values"
+                android:key="preferences_audio_src"
+                android:negativeButtonText="@null"
+                android:positiveButtonText="@null"
+                android:summary="@string/label_audio_src_summary"
+                android:title="@string/label_audio_src_title" />
+
+        </PreferenceScreen>
+
+
+        <PreferenceScreen
+            android:icon="@mipmap/ic_streaming"
+            android:key="preferences_streaming_settings"
+            android:persistent="true"
+            android:summary="@string/label_streaming_settings_summary"
+            android:title="@string/label_streaming_settings_title">
+
+            <com.mymobkit.preference.SeekBarDialogPreference
+                android:defaultValue="@string/default_video_streaming_image_quality"
+                android:dialogMessage="@string/label_video_streaming_image_summary"
+                android:key="preferences_video_streaming_image_quality"
+                android:max="100"
+                android:summary="@string/label_video_streaming_image_summary"
+                android:title="@string/label_video_streaming_image_title"
+                custom:min="1"
+                custom:progressTextSuffix="" />
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_disguise_camera"
+                android:key="preferences_disguise_camera"
+                android:summary="@string/label_disguise_summary"
+                android:title="@string/label_disguise_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="@string/default_stealth_mode"
+                android:key="preferences_stealth_mode"
+                android:summary="@string/label_stealth_mode_summary"
+                android:title="@string/label_stealth_mode_title" />
+            <CheckBoxPreference
+                android:defaultValue="@string/default_stream_detected_object"
+                android:key="preferences_stream_detected_object"
+                android:summary="@string/label_stream_detected_object_summary"
+                android:title="@string/label_stream_detected_object_title" />
+
+            <com.mymobkit.preference.NonEmptyEditTextPreference
+                android:defaultValue="@string/default_video_streaming_port"
+                android:dialogMessage="@string/label_video_streaming_port_summary"
+                android:dialogTitle="@string/label_video_streaming_port_title"
+                android:key="preferences_video_streaming_port"
+                android:maxLength="4"
+                android:numeric="integer"
+                android:summary="@string/label_video_streaming_port_summary"
+                android:title="@string/label_video_streaming_port_title" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

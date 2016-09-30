@@ -1,0 +1,224 @@
+<resources>
+
+    <!-- Root styles that vary by API level -->
+    <!-- Disable RTL support on older devices -->
+    <!-- Prevents crash on certain devices to namespace conflict -->
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light" />
+
+    <style name="FrameworkRoot.Widget" parent="Theme.AppCompat" />
+
+    <!-- Immediate parent theme to specify base values for custom attributes -->
+    <style name="Theme" parent="FrameworkRoot.Theme">
+        <!-- Only needed for pre-L -->
+        <item name="android:editTextBackground">@drawable/edit_text</item>
+        <item name="android:editTextStyle">@style/Widget.MyMobKit.EditText</item>
+    </style>
+
+    <style name="Theme.MyMobKit.Base" parent="Theme">
+        <item name="actionBarIconColor">#fff</item>
+        <item name="actionBarInsetStart">@dimen/keyline_2</item>
+        <item name="homeAsUpIndicator">@drawable/ic_up</item>
+        <item name="spinnerBarInsetStart">@dimen/keyline_2_minus_16dp</item>
+        <item name="popupItemBackground">?android:selectableItemBackground</item>
+        <item name="photoItemForeground">?android:selectableItemBackground</item>
+        <item name="photoItemForegroundBorderless">?android:selectableItemBackground</item>
+
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent_1_light</item>
+
+        <item name="android:textColorLink">@color/theme_accent_1_light</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_up</item>
+
+        <item name="android:popupMenuStyle">@style/Widget.MyMobKit.PopupMenu</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.MyMobKit.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.MyMobKit.ListView.DropDown</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.LargePopupMenu
+        </item>
+
+        <item name="searchViewStyle">@style/Widget.MyMobKit.SearchView</item>
+
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:listSeparatorTextViewStyle">@style/MyMobKit.PreferenceStyle</item>
+
+    </style>
+
+    <style name="Theme.MyMobkit.Dialog" parent="Theme.MyMobKit.Base">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:maxWidth">600dp</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+
+    <style name="Widget.TextView.ListSeparator" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyMobKit.PreferenceStyle" parent="Widget.TextView.ListSeparator">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/gray_background</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="Theme.MyMobKit" parent="Theme.MyMobKit.Base" />
+
+    <style name="Theme.MyMobKit.WithNavDrawer" parent="Theme.MyMobKit" />
+
+    <style name="Theme.MyMobKit.Widget" parent="FrameworkRoot.Widget">
+        <item name="android:popupMenuStyle">@style/Widget.MyMobKit.PopupMenu</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.MyMobKit.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.MyMobKit.ListView.DropDown</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.LargePopupMenu
+        </item>
+    </style>
+
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="colorControlNormal">?actionBarIconColor</item>
+        <item name="colorControlHighlight">#3fff</item>
+    </style>
+
+    <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CoachMark.Text" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.MyMobKit.HeaderBar.Spinner.Base" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:dropDownSelector">?android:selectableItemBackground</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+
+    <style name="Widget.MyMobKit.HeaderBar.Spinner" parent="Widget.MyMobKit.HeaderBar.Spinner.Base" />
+
+    <style name="Widget.MyMobKit.PopupMenu" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:dropDownSelector">?popupItemBackground</item>
+    </style>
+
+    <style name="Widget.MyMobKit.ListView.DropDown" parent="Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">?popupItemBackground</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="TextAppearance.LargePopupMenu" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/body_text_1</item>
+    </style>
+
+    <style name="Widget.MyMobKit.SearchView" parent="Widget.AppCompat.SearchView" />
+
+    <!-- Misc -->
+    <style name="TabIndicator" />
+
+    <!-- Transparent Action Bar -->
+    <style name="TransparentActionBar" parent="">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TranslucentActionBar" parent="">
+        <item name="android:background">@color/translucent_actionbar_background</item>
+    </style>
+
+    <!-- Empty views -->
+    <style name="EmptyText">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/body_text_disabled</item>
+    </style>
+
+    <!-- Body content -->
+    <style name="TextHeader">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">@integer/font_textStyle_medium</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="TextHeaderSub">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/body_text_2</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="Widget.MyMobKit.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:elevation">@dimen/headerbar_elevation</item>
+    </style>
+
+    <style name="FullScreen" parent="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+    <style name="Widget.PhotoGallery.Name" parent="android:Widget.TextView">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Widget.PhotoGallery.Caption" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Widget.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.SubTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

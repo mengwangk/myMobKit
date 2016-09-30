@@ -1,0 +1,13 @@
+<div class="modal-header">
+	<h3 class="modal-title">Captured at {{getDatetime() | date:'yyyy-MM-dd HH:mm:ss Z'}}</h3>
+</div>
+
+<div class="modal-body">
+	
+	<img class="img-responsive" ng-src="{{snapShotUrl}}" alt="Loading image.....">
+	
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="close()">Close</button>
+</div>

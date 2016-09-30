@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Enable RTL support on newer devices -->
+    <!-- Prevents crash on certain devices to namespace conflict -->
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light">
+        <item name="android:paddingStart">?android:attr/paddingLeft</item>
+        <item name="android:paddingEnd">?android:attr/paddingRight</item>
+        <item name="android:layout_marginStart">?android:attr/layout_marginLeft</item>
+        <item name="android:layout_marginEnd">?android:attr/layout_marginRight</item>
+        <item name="android:layout_toStartOf">?android:attr/layout_toLeftOf</item>
+        <item name="android:layout_toEndOf">?android:attr/layout_toRightOf</item>
+        <item name="android:layout_alignParentStart">?android:attr/layout_alignParentLeft</item>
+        <item name="android:layout_alignParentEnd">?android:attr/layout_alignParentRight</item>
+        <item name="android:drawableStart">?android:attr/drawableLeft</item>
+        <item name="android:drawableEnd">?android:attr/drawableRight</item>
+    </style>
+
+</resources>

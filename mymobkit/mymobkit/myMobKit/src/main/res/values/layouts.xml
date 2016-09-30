@@ -1,0 +1,3 @@
+<resources>
+    <item name="activity_home" type="layout">@layout/activity_home_narrow</item>
+</resources>

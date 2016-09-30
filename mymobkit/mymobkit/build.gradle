@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        // For FFmpeg
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7"
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven {
+            url "https://raw.github.com/whispersystems/maven/master/smil/releases/"
+        }
+    }
+}
+
+// FFmpeg for android
+ext {
+    compileSdkVersion = 22
+    buildToolsVersion = '24.0.1'
+    targetSdkVersion = 23
+    minSdkVersion = 14
+    versionCode = 28
+    versionName = "0.3.2"
+}

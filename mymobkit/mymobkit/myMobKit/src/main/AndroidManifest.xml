@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mymobkit"
+    android:installLocation="auto"
+    android:versionCode="63"
+    android:versionName="0.8.22">
+
+    <!-- refer https://developer.android.com/training/permissions/requesting.html -->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- camera is required - March 25 2016 -->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <!-- for webrtc -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- for MMS -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- For MMS -->
+    <uses-permission
+        android:name="android.permission.BROADCAST_WAP_PUSH"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.mymobkit.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.mymobkit.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- for debugging purpose only -->
+    <!--
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    -->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/actionbar_logo"
+        android:theme="@style/Theme.MyMobKit">
+
+        <!--
+        <activity android:name=".ui.activity.GcmActivity" >
+            <intent-filter>
+
+                
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                
+            </intent-filter>
+        </activity>
+        -->
+        <!--
+        <service
+            android:name=".service.WebcamService"
+            android:enabled="true"
+            android:exported="false"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/webcam_service_name"
+            android:permission="android.permission.CAMERA" >
+            <intent-filter>
+                <action android:name="com.mymobkit.service.IWebcamService" />
+            </intent-filter>
+        </service>
+        -->
+        <!-- android:name=".ui.activity.ControlPanelActivity" -->
+        <activity
+            android:name=".ui.activity.ControlPanelActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Accepts URIs that begin with "http://www.mymobkit.com” -->
+                <data
+                    android:host="www.mymobkit.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <!--
+           android:process=":videoStreaming"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.mymobkit.ui.activity.WebcamActivity"
+        android:keepScreenOn="true"
+        -->
+        <activity
+            android:name=".ui.activity.WebcamActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:label="@string/label_video_streaming"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ui.activity.ControlPanelActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen">
+
+            <!-- Parent activity meta-data to support API level 4+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mymobkit.ui.activity.ControlPanelActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:label="@string/label_title_about"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.activity.ExploreActivity">
+
+            <!-- Parent activity meta-data to support API level 4+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mymobkit.ui.activity.ExploreActivity" />
+
+            <!-- for KitKat compatibility -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ExploreActivity"
+            android:label="@string/label_explore"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".ui.activity.ViewerActivity"
+            android:label="@string/label_viewer_mode"
+            android:launchMode="singleTop" />
+
+
+        <activity
+            android:name="haibison.android.lockpattern.LockPatternActivity"
+            android:theme="@style/Alp_42447968.Theme.Dialog.Light"
+            tools:replace="android:theme" />
+
+        <!--
+              <activity
+              android:name="group.pals.android.lib.ui.lockpattern.LockPatternActivity"
+              android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+              android:screenOrientation="user"
+              android:theme="@style/Alp.Theme.Dialog.Light" />
+        -->
+
+
+        <!-- TODO: taken out for debugging purpose. Need to add in later. android:process=":httpdService" -->
+        <service
+            android:name=".service.HttpdService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/http_service_name">
+            <intent-filter>
+                <action android:name="com.mymobkit.service.IHttpdService" />
+
+                <!--  <action android:name="com.mymobkit.xmpp.action.init.START" />
+                  <action android:name="com.mymobkit.xmpp.action.init.CONNECT" />
+                  <action android:name="com.mymobkit.xmpp.action.XMPP.MESSAGE_RECEIVED" />
+                  <action android:name="com.mymobkit.xmpp.action.SEND" />
+                  <action android:name="com.mymobkit.xmpp.action.COMMAND" />-->
+
+            </intent-filter>
+        </service>
+        <service android:name=".service.RemoteStartupService" />
+
+        <!-- BroadcastReceiver that listens for incoming MMS messages -->
+        <receiver
+            android:name=".receiver.MmsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_WAP_PUSH">
+            <intent-filter android:priority="1001">
+                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Service that delivers messages from the phone "quick response" -->
+        <service
+            android:name=".service.HeadlessSmsSendService"
+            android:exported="true"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </service>
+        <!--<service android:name="com.android.mms.transaction.TransactionService" />-->
+
+        <receiver android:name=".receiver.PhoneBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.SmsReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <!-- for Gingerbread GSF backward compat -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.mymobkit" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".gcm.AppGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.AppInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.RegistrationIntentService"
+            android:exported="false" />
+
+        <!-- TODO android:process=":webcamService" -->
+        <service
+            android:name=".service.webcam.WebcamService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/webcam_service_name"
+            android:permission="android.permission.CAMERA">
+            <intent-filter>
+                <action android:name="com.mymobkit.service.ICameraService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.UssdService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/ussd_service" />
+        </service>
+
+        <!--  <receiver
+              android:name=".ui.widget.ViewerWidget1"
+              android:icon="@drawable/ic_launcher"
+              android:label="@string/mymobkit_viewer" >
+              <intent-filter>
+                  <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                  <action android:name="com.mymobkit.viewer.widget.action.UPDATE" />
+              </intent-filter>
+
+              <meta-data
+                  android:name="android.appwidget.provider"
+                  android:resource="@xml/viewer_widget" />
+          </receiver>-->
+
+        <!-- <service android:name=".service.ViewerService" />-->
+
+        <receiver android:name=".ui.widget.ViewerWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+                <action android:name="com.mymobkit.widget.action.UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/viewer_widget_info" />
+        </receiver>
+
+        <activity android:name=".ui.activity.ViewerWidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- // TODO in later release -->
+        <activity
+            android:name=".ui.activity.IntroductionActivity"
+            android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <provider
+            android:name=".mms.provider.MmsBodyProvider"
+            android:authorities="com.mymobkit.provider.sms.mms"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <!-- Receiver for GCM heartbeat broadcast -->
+        <!-- <receiver
+             android:name="com.mymobkit.receiver.GcmHeartBeatReceiver">
+         </receiver>-->
+
+    </application>
+
+</manifest>

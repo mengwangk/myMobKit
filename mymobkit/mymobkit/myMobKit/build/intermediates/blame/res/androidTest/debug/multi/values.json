@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\src\\androidTest\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 57,
+                        "endOffset": 112
+                    }
+                }
+            }
+        ]
+    }
+]

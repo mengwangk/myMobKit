@@ -1,0 +1,4 @@
+#Sun Sep 25 23:31:55 SGT 2016
+base.0=C\:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\myspace\\2016\\Development\\mymobkit\\mymobkit\\myMobKit\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

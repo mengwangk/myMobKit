@@ -1,0 +1,221 @@
+x264 configure script
+Command line options: "--cross-prefix=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-" "--sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot" "--host=i686-linux" "--enable-pic" "--disable-asm" "--enable-static" "--disable-shared" "--prefix=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android" "--disable-cli"
+
+checking whether /home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc works... yes
+checking whether /home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking for -mpreferred-stack-boundary=5... yes
+checking for pthread_create(0,0,0,0); in pthread.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lpthread  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm -o conftest
+conftest.c: In function 'main':
+conftest.c:2:1: warning: null argument where non-null required (argument 1) [-Wnonnull]
+ int main (void) { pthread_create(0,0,0,0); return 0; }
+ ^
+conftest.c:2:1: warning: null argument where non-null required (argument 3) [-Wnonnull]
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lpthread
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <pthread.h>
+int main (void) { pthread_create(0,0,0,0); return 0; }
+--------------------------------------------------
+checking for pthread_create(0,0,0,0); in pthread.h... yes
+checking for cpu_set_t p_aff; return CPU_COUNT(&p_aff); in sched.h... yes
+checking for return log2f(2); in math.h... yes
+checking for MADV_HUGEPAGE; in sys/mman.h... yes
+checking for sws_init_context(0,0,0); in libswscale/swscale.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5   -lswscale -lavutil  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:32: fatal error: libswscale/swscale.h: No such file or directory
+ #include <libswscale/swscale.h>
+                                ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libswscale/swscale.h>
+int main (void) { sws_init_context(0,0,0); return 0; }
+--------------------------------------------------
+checking for -lpostproc... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lpostproc  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lpostproc
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lavcodec... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lavcodec  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lavcodec
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lswscale... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lswscale  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lswscale
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lavutil... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lavutil  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lavutil
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lm... yes
+checking for -lz... yes
+checking for -lbz2... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lbz2  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lbz2
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lavifil32... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lavifil32  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lavifil32
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lws2_32... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lws2_32  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/../lib/gcc/i686-linux-android/4.9/../../../../i686-linux-android/bin/ld: error: cannot find -lws2_32
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for av_frame_free(0); in libavformat/avformat.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5   -L. -lavformat -lm -lz  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:34: fatal error: libavformat/avformat.h: No such file or directory
+ #include <libavformat/avformat.h>
+                                  ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libavformat/avformat.h>
+int main (void) { av_frame_free(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5   -lffms2  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:18: fatal error: ffms.h: No such file or directory
+ #include <ffms.h>
+                  ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main (void) { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5   -lffms2 -lstdc++ -L. -lavformat -lm -lz  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:18: fatal error: ffms.h: No such file or directory
+ #include <ffms.h>
+                  ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main (void) { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for lsmash.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5   -llsmash  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:20: fatal error: lsmash.h: No such file or directory
+ #include <lsmash.h>
+                    ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <lsmash.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lz... yes
+checking for gpac/isomedia.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -std=gnu99 -mpreferred-stack-boundary=5  -lgpac_static -lz  -m32  --sysroot=/home/mengwangk/ffmpeg/ffmpeg-android-master/toolchain-android/sysroot -lm  -o conftest
+conftest.c:1:27: fatal error: gpac/isomedia.h: No such file or directory
+ #include <gpac/isomedia.h>
+                           ^
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <gpac/isomedia.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for stdio.h... yes
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for -Wmaybe-uninitialized... yes
+
+platform:      X86
+byte order:    little-endian
+system:        LINUX
+cli:           no
+libx264:       internal
+shared:        no
+static:        yes
+asm:           no
+interlaced:    yes
+avs:           avxsynth
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        posix
+opencl:        yes
+filters:       crop select_every 
+debug:         no
+gprof:         no
+strip:         no
+PIC:           yes
+bit depth:     8
+chroma format: all

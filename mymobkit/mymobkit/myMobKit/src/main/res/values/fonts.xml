@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="font_fontFamily_medium">sans-serif</string>
+
+    <string name="font_fontFamily_drawer_item">sans-serif</string>
+
+</resources>
