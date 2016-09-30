@@ -1,0 +1,38 @@
+{
+  "author": "Koh Meng Wang",
+  "name": "mymobkit",
+  "version": "0.8.21",
+  "homepage": "http://www.mymobkit.com",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://www.mymobkit.com"
+  },
+  "bugs": "http://www.mymobkit.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ngbp/ngbp.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bump": "0.1.0",
+    "grunt-coffeelint": "~0.0.15",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "~1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-conventional-changelog": "^6.1.0",
+    "grunt-html2js": "^0.3.5",
+    "grunt-karma": "^0.12.2",
+    "grunt-ng-annotate": "^2.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-coffee-preprocessor": "^0.3.0",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8"
+  }
+}

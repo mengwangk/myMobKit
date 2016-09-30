@@ -1,0 +1,22 @@
+{
+  "name": "mymobkit",
+  "version": "0.8.21",
+  "devDependencies": {
+    "angular": "~1.5",
+    "angular-mocks": "~1.5",
+    "bootstrap": "~3.3",
+    "angular-bootstrap": "~1.2.5",
+    "angular-ui-router": "~0.2",
+    "ng-grid": "~2.0.14",
+    "angular-touch": "~1.4",
+    "AngularJS-Toaster": "angularjs-toaster#~1.0.0",
+    "ngstorage": "~0.3.10",
+    "angular-nvd3": "~1.0.8"
+  },
+  "dependencies": {
+    
+  },
+  "resolutions": {
+    "angular": "~1.5"
+  }
+}
