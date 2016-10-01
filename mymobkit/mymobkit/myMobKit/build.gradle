@@ -14,9 +14,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'mymobkit'
-            keyPassword 'Money123$'
+            keyPassword ''
             storeFile file('C:/myspace/2016/Development/mymobkit/store/build_key')
-            storePassword 'Money123$'
+            storePassword ''
         }
     }
     compileSdkVersion 23
