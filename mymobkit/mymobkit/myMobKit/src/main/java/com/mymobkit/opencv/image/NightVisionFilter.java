@@ -152,22 +152,43 @@ public class NightVisionFilter extends NightVision implements INightVision {
 
             if (useGammaCorrection) {
                 if (!useHistogramEqualization) {
-                    // Gamma correction
-                    Imgproc.cvtColor(sourceFrame, processedFrame, Imgproc.COLOR_YUV2BGRA_NV21);
+                    if (isColor) {
+                        // Gamma correction
+                        Imgproc.cvtColor(sourceFrame, processedFrame, Imgproc.COLOR_YUV2BGRA_NV21);
+                    } else {
+                        Imgproc.cvtColor(sourceFrame, processedFrame, Imgproc.COLOR_YUV420p2GRAY);
+                    }
+                } else {
+                    // ? Do nothing
                 }
                 Core.LUT(processedFrame, lutMat, processedFrame);
             }
 
+            if (useHistogramEqualization || useGammaCorrection) {
+                if (!isColor)
+                    return CvUtils.grayToJpeg(processedFrame, imageQuality);
+                else
+                    return CvUtils.toJpegByteArray(processedFrame, imageQuality);
+            } else {
+                return source;
+            }
+            /*
             if (useHistogramEqualization) {
                 if (!isColor)
                     return CvUtils.grayToJpeg(processedFrame, imageQuality);
                 else
                     return CvUtils.toJpegByteArray(processedFrame, imageQuality);
             } else if (useGammaCorrection) {
-                return CvUtils.toJpegByteArray(processedFrame, imageQuality);
+                if (!isColor) {
+                    return CvUtils.grayToJpeg(processedFrame, imageQuality);
+                } else {
+                    return CvUtils.toJpegByteArray(processedFrame, imageQuality);
+                }
             } else {
                 return source;
             }
+            */
+
         } catch (Exception e) {
             LOGE(TAG, "[process] Error processing frame", e);
             return source;
@@ -211,7 +232,12 @@ public class NightVisionFilter extends NightVision implements INightVision {
                 if (useHistogramEqualization) {
                     Core.LUT(processedFrame, lutMat, processedFrame);
                 } else {
-                    Core.LUT(source, lutMat, processedFrame);
+                    if (!isColor) {
+                        Imgproc.cvtColor(source, processedFrame, Imgproc.COLOR_BGRA2GRAY);
+                        Core.LUT(processedFrame, lutMat, processedFrame);
+                    } else {
+                        Core.LUT(source, lutMat, processedFrame);
+                    }
                 }
             }
 
@@ -221,7 +247,11 @@ public class NightVisionFilter extends NightVision implements INightVision {
                 else
                     return CvUtils.toJpegByteArray(processedFrame, imageQuality);
             } else if (useGammaCorrection) {
-                return CvUtils.toJpegByteArray(processedFrame, imageQuality);
+                if (!isColor) {
+                    return CvUtils.grayToJpeg(processedFrame, imageQuality);
+                } else {
+                    return CvUtils.toJpegByteArray(processedFrame, imageQuality);
+                }
             } else {
                 return null;
             }
