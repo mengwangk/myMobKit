@@ -1,0 +1,65 @@
+body {
+	padding-top: 100px;
+}
+
+.navbar-brand {
+	padding: 3px 5px;
+}
+
+a.appstore img {
+	margin: 20px 5px 0 0;
+}
+
+#features {
+	margin: 1.5em 0;
+	min-height: 300px;
+}
+
+#features td {
+	vertical-align: top;
+}
+
+#features li {
+	background: url('../img/check.png') no-repeat left;
+	list-style: none;
+	padding-left: 25px;
+	margin-left: -23px;
+	line-height: 1.7em;
+}
+
+.carousel-indicators {
+	bottom: -50px;
+}
+
+.carousel-indicators ol {
+	border-color: #999;
+	background-color: #ccc;
+}
+
+.carousel-inner {
+	margin-bottom: 50px;
+}
+
+div.android {
+	position: relative;
+	width: 290px;
+}
+
+div.android>div.carousel {
+	position: absolute;
+}
+
+div.android {
+	background: url('../img/phone.png') no-repeat top left;
+	height: 565px;
+}
+
+div.android>div.carousel {
+	left: 15px;
+	top: 64px;
+}
+
+div.android>div.carousel img {
+	height: 411px;
+	width: 264px;
+}

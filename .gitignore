@@ -52,5 +52,18 @@ vendor/
 bin/
 apk/
 samples/
+.gwt/
+.settings/
+gwt-unitCache/
+target/
+test-classes/
+appengine-generated/
+classes/
+lib/
+deploy/
+
+
+
+
 
 

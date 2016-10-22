@@ -1,0 +1,34 @@
+<!-- See Queues.java for docs -->
+<queue-entries>
+	<total-storage-limit>500M</total-storage-limit>	<!-- default is 100M -->
+
+	<!-- This is as fast as we can make them -->
+
+	<queue>
+		<name>default</name>
+		<rate>500/s</rate>
+		<bucket-size>100</bucket-size>
+		<max-concurrent-requests>100</max-concurrent-requests>
+	</queue>
+
+	<queue>
+		<name>sync</name>
+		<rate>500/s</rate>
+		<bucket-size>100</bucket-size>
+		<max-concurrent-requests>100</max-concurrent-requests>
+	</queue>
+
+	<queue>
+		<name>gcm</name>
+		<rate>500/s</rate>
+		<max-concurrent-requests>100</max-concurrent-requests>
+		<bucket-size>100</bucket-size>
+		<retry-parameters>
+			<task-retry-limit>7</task-retry-limit>
+			<min-backoff-seconds>10</min-backoff-seconds>
+			<max-backoff-seconds>200</max-backoff-seconds>
+			<max-doublings>2</max-doublings>
+		</retry-parameters>
+	</queue>
+
+</queue-entries>
