@@ -18,10 +18,10 @@ public final class AppConfig {
 	public static final String SURVEILLANCE_IMAGE_VIEWER_PAGE = "viewer.jsp";
 	
 	// DEV key
-	public static final String API_KEY_DEV = "** Removed";
+	public static final String API_KEY_DEV = "** Removed ";
 
 	// PROD key
-	public static final String API_KEY_PROD = "** Removed";
+	public static final String API_KEY_PROD = "** Removed ";
 
 	// GCM attribute key
 	public static final String ATTRIBUTE_GCM_KEY = "apiKey";
