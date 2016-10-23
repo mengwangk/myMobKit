@@ -10,7 +10,7 @@ public final class AppConfig {
 	/**
 	 * Production hosting domain.
 	 */
-	public static final String PRODUCTION_APP_NAME = "phone-kit";
+	public static final String PRODUCTION_APP_NAME = "** Removed";
 	
 	/**
 	 * Web page to view the captured images.
@@ -18,10 +18,10 @@ public final class AppConfig {
 	public static final String SURVEILLANCE_IMAGE_VIEWER_PAGE = "viewer.jsp";
 	
 	// DEV key
-	public static final String API_KEY_DEV = "AIzaSyDWGJztJGQ8sTzLiGWrK7AgfXudz84IOHk";
+	public static final String API_KEY_DEV = "** Removed";
 
 	// PROD key
-	public static final String API_KEY_PROD = "AIzaSyA7_0WDum9qQ6KKKzf5aBi6xexDamjChHY";
+	public static final String API_KEY_PROD = "** Removed";
 
 	// GCM attribute key
 	public static final String ATTRIBUTE_GCM_KEY = "apiKey";

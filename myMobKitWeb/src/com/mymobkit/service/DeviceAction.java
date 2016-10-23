@@ -191,45 +191,7 @@ public class DeviceAction {
 		return deviceInfo;
 	}
 
-	/**
-	 * Get device information.
-	 * 
-	 * @param deviceId
-	 *            .
-	 * @return
-	 */
-	@GET
-	@Path("/info/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public DeviceInfo info(@PathParam("id") String deviceId) {
-		// Retrieve device info
-		Device device = ofy().load().type(Device.class).id(deviceId).now();
-		final DeviceInfo deviceInfo = new DeviceInfo();
-		if (device != null) {
-			deviceInfo.addDevice(device);
-			deviceInfo.setResponseCode(ResponseCode.SUCCESS.getCode());
-		} else {
-			deviceInfo.setResponseCode(ResponseCode.DEVICE_NOT_FOUND.getCode());
-		}
-		return deviceInfo;
-	}
-
-	/**
-	 * Get device information.
-	 * 
-	 * @return
-	 */
-	@GET
-	@Path("/info")
-	@Produces(MediaType.APPLICATION_JSON)
-	public DeviceInfo info() {
-		// Retrieve all devices info
-		List<Device> devices = ofy().load().type(Device.class).list();
-		final DeviceInfo deviceInfo = new DeviceInfo(devices);
-		deviceInfo.setResponseCode(ResponseCode.SUCCESS.getCode());
-		return deviceInfo;
-	}
-
+	
 	@POST
 	@Path("/queue")
 	@Produces(MediaType.APPLICATION_JSON)
