@@ -36,7 +36,7 @@ import static com.mymobkit.common.LogUtils.makeLogTag;
  * Application level instance.
  */
 @ReportsCrashes(
-        formUri = "https://mengwangk.cloudant.com/acra-mymobkit/_design/acra-storage/_update/report",
+        formUri = "cloudant URL ** Removed",
         reportType = HttpSender.Type.JSON,
         httpMethod = HttpSender.Method.POST,
         formUriBasicAuthLogin = "XXX - Removed",

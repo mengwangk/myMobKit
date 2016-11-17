@@ -121,8 +121,8 @@
     <string name="mymobkit_viewer">myMobKit Viewer</string>
     <string name="notif_http_service">%1$s</string>
     <string name="notif_service">myMobKit notification</string>
-    <string name="app_server_prod">http://www.mymobkit.com</string>
-    <string name="app_server_debug">http://mymobkit-rtc.appspot.com</string>
+    <string name="app_server_prod">http://www.XXX.com</string>
+    <string name="app_server_debug">http://XXXX.appspot.com</string>
     <string name="app_upload_request_blob_url">/upload?request=1</string>
     <string name="app_register_request_url">/service/device/register</string>
     <string name="app_queue_msg_request_url">/service/device/queue</string>
