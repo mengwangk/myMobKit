@@ -14,9 +14,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'mymobkit'
-            keyPassword ''
+            keyPassword 'Money123$'
             storeFile file('C:/myspace/2016/Development/mymobkit/store/build_key')
-            storePassword ''
+            storePassword 'Money123$'
         }
     }
     compileSdkVersion 23
@@ -136,8 +136,8 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.loopj.android:android-async-http:+'
     compile 'com.github.codechimp-org.apprater:library:+'
-    compile 'ch.acra:acra:4.8.2'
-    compile 'org.bitbucket.haibison:android-lockpattern:+'
+    compile 'ch.acra:acra:4.9.1'
+    compile 'haibison.android:lockpattern:+'
     compile 'com.commit451:PhotoView:1.2.4'
     compile 'org.w3c:smil:1.0.0'
     compile 'org.whispersystems:jobmanager:1.0.2'

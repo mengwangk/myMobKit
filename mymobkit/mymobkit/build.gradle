@@ -22,6 +22,7 @@ allprojects {
         maven {
             url "https://raw.github.com/whispersystems/maven/master/smil/releases/"
         }
+        maven { url 'http://haibison.bitbucket.org/maven-repos' }
     }
 }
 
